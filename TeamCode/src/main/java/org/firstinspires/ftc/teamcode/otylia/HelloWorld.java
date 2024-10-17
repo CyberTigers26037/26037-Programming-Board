@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.otylia;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
-@Autonomous
+@Autonomous (name = "HelloWorld", group = "otylia")
 public class HelloWorld extends OpMode {
     /**
      * This is called when the driver presses INIT

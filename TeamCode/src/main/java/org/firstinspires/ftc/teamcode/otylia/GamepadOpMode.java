@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.otylia;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
+@TeleOp(name = "GamepadOpMode", group = "otylia")
 public class GamepadOpMode extends OpMode {
     @Override
     public void init() {

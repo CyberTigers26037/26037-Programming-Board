@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.david_tang_and_nathan_lee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
+@TeleOp(name = "HelloWorld", group = "david and nathan")
 public class HelloWorld extends OpMode {
 
 

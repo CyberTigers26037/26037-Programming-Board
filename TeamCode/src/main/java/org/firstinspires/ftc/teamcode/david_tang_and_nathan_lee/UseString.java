@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.david_tang_and_nathan_lee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name = "UseString", group = "david and nathan")
 public class UseString extends OpMode {
     @Override
     public void init() {

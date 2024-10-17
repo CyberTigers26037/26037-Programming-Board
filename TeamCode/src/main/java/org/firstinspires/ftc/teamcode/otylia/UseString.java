@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.otylia;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
+@TeleOp(name = "UseString", group = "otylia")
 public class UseString extends OpMode {
     @Override
     public void init() {
