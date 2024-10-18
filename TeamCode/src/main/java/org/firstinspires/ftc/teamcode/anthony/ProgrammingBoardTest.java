@@ -31,9 +31,9 @@ public class ProgrammingBoardTest extends OpMode {
 
         motor = hardwareMap.get(DcMotor.class, "motor");
         servo = hardwareMap.get(Servo.class, "servo");
-        potentiometer = hardwareMap.analogInput.get("potentiometer");
-        touchSensor = hardwareMap.get(TouchSensor.class, "touchSensor");
-        colorSensor = hardwareMap.get(NormalizedColorSensor.class, "colorSensor");
+        potentiometer = hardwareMap.analogInput.get("pot");
+        touchSensor = hardwareMap.get(TouchSensor.class, "touch_sensor");
+        colorSensor = hardwareMap.get(NormalizedColorSensor.class, "sensor_color_distance");
     }
 
     @Override
