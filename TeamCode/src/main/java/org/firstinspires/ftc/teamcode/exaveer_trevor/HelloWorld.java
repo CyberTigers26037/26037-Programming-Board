@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.exaveer_trevor;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "HelloWorld", group = "trevor and exaveer")
+@TeleOp(name = "Trevor & Exaveer HelloWorld")
 public class HelloWorld extends OpMode {
 
     @Override

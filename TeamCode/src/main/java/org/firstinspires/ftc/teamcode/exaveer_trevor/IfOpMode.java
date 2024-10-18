@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
 
-@TeleOp(name = "IfOpMode", group = "trevor and exaveer")
+@TeleOp(name = "Trevor & Exaveer IfOpMode")
 public class IfOpMode extends OpMode {
     @Override
     public void init() {
