@@ -1,8 +1,9 @@
 package org.firstinspires.ftc.teamcode.otylia;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@Autonomous(name = "PrimitiveTypes", group = "otylia")
+@TeleOp(name = "Otylia PrimitiveTypes")
 public class PrimitiveTypes extends OpMode {
     @Override
     public void init() {
