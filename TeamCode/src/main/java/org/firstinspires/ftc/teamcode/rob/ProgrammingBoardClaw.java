@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 
 public class ProgrammingBoardClaw extends OpMode {
     private static final double SERVO_DEGREES = 270;
-    private static final double WRIST_OFFSET=-1.0;
+    private static final double WRIST_OFFSET = -10;
     private Servo claw;
     private Servo wrist;
     private Servo elbowLt;
@@ -51,8 +51,8 @@ public class ProgrammingBoardClaw extends OpMode {
         // Elevate elbow w/lt stick moving fwd and aft - will hold posit when released
         elbowDegrees += gamepad1.left_stick_y*1.0;
 
-        // Elbows are centered at 20deg from zero (tucked in) and actuate to 90deg
-        elbowDegrees = MathUtils.clamp(elbowDegrees, -90,20);
+        // Elbows are centered at 40deg from zero (tucked in) and actuate to 90deg
+        elbowDegrees = MathUtils.clamp(elbowDegrees, -90,40);
 
         // Lt Elbow pos | Rt Elbow neg
         setServoToAngle(elbowLt, elbowDegrees);
