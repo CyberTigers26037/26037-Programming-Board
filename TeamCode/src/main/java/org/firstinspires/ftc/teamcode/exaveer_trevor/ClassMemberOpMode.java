@@ -32,6 +32,6 @@ public class ClassMemberOpMode extends OpMode {
 
         telemetry.addData("After X", leftAmount);
         telemetry.addData("After Y", fwdAmount);
+
     }
 }
-
