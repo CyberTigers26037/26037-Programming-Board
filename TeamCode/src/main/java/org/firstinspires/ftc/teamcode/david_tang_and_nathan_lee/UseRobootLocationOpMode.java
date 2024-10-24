@@ -8,16 +8,18 @@ public class UseRobootLocationOpMode extends OpMode{
     private boolean rightAlreadyPressed=false;
     private boolean aAlreadyPressed=false;
     private boolean bAlreadyPressed=false;
+    private boolean upAlreadyPressed=false;
+    private boolean downAlreadyPressed=false;
     public void init() {
         robotLocation.setAngle(0);
     }
 
 
     public void loop() {
-        if (gamepad1.a && aAlreadyPressed){
+        if (gamepad1.a && !aAlreadyPressed){
             robotLocation.turn(-0.1);
         }
-        else if (gamepad1.b && bAlreadyPressed){
+        else if (gamepad1.b && !bAlreadyPressed){
             robotLocation.turn(0.1);
         }
         else if (gamepad1.dpad_left && !leftAlreadyPressed){
@@ -28,6 +30,14 @@ public class UseRobootLocationOpMode extends OpMode{
             robotLocation.changeX(0.1);
 
         }
+        else if (gamepad1.dpad_up && !upAlreadyPressed){
+            robotLocation.changeY(0.1);
+        }
+        else if (gamepad1.dpad_down && !downAlreadyPressed){
+            robotLocation.changeY(-0.1);
+        }
+        downAlreadyPressed = gamepad1.dpad_down;
+        upAlreadyPressed = gamepad1.dpad_up;
         aAlreadyPressed = gamepad1.a;
         bAlreadyPressed = gamepad1.b;
         rightAlreadyPressed = gamepad1.dpad_right;
@@ -36,5 +46,6 @@ public class UseRobootLocationOpMode extends OpMode{
         telemetry.addData("Heading", robotLocation.getHeading());
         telemetry.addData("Angle",robotLocation.getAngle());
         telemetry.addData("x",robotLocation.getX());
+        telemetry.addData("y",robotLocation.getY());
     }
 }
