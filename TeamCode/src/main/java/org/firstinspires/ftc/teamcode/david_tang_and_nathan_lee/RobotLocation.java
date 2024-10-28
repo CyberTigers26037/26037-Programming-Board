@@ -5,7 +5,7 @@ import androidx.versionedparcelable.ParcelField;
 public class RobotLocation {
     double angle;
     double x;
-
+    double y;
     public RobotLocation(double angle){
         this.angle = angle;
     }
@@ -31,8 +31,7 @@ public class RobotLocation {
     }
     public void turn (double angleChange){
 
-        angle += angleChange;
-
+this.angle = this.angle+angleChange;
     }
 
     public void setAngle(double angle){
@@ -54,9 +53,13 @@ public class RobotLocation {
 
         this.x = this.x+change;
     }
-    public void setX(double x){
-        this.x = x;
+    public double getY() {
+        return this.y;
+    }
+    public void changeY(double change){
+        this.y = this.y+change;
     }
 
-
 }
+
+

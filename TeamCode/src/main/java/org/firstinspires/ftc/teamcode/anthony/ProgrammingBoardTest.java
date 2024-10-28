@@ -44,6 +44,7 @@ public class ProgrammingBoardTest extends OpMode {
         double motorPower = -this.gamepad1.left_stick_y;
         motor.setPower(motorPower);
         telemetry.addData("Motor Power: ", motorPower);
+        telemetry.addData("Motor Position: ", motor.getCurrentPosition());
 
         // Set servo position to +/- 45 degrees based on right stick x
         double servoAngle = gamepad1.right_stick_x * 45;
