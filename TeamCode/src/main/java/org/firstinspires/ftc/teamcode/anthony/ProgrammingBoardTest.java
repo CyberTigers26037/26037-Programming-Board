@@ -12,6 +12,7 @@ import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
 import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.TouchSensor;
+import com.qualcomm.robotcore.util.Range;
 
 @SuppressWarnings("unused")
 @TeleOp(name="Anthony Programming Board Test")
@@ -71,7 +72,6 @@ public class ProgrammingBoardTest extends OpMode {
     }
 
     private void setServoToAngle(double degrees) {
-        degrees += SERVO_DEGREES / 2;
-        servo.setPosition(degrees / SERVO_DEGREES);
+        servo.setPosition(Range.scale(degrees, -SERVO_DEGREES/2, SERVO_DEGREES/2, 0, 1));
     }
 }
