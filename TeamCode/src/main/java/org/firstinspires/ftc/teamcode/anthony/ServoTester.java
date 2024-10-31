@@ -37,7 +37,6 @@ public class ServoTester extends OpMode {
         servoPositions = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             servos.add(new ServoImplEx(servoControllers.get(0), i, ServoConfigurationType.getStandardServoType()));
-
             servoPositions.add(0.0);
         }
 
