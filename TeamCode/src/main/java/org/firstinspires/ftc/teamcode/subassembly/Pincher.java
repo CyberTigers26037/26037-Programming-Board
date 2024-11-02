@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.subassemblies;
+package org.firstinspires.ftc.teamcode.subassembly;
 
 import com.qualcomm.hardware.sparkfun.SparkFunOTOS;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -31,10 +31,15 @@ public class Pincher {
     }
 
     public void zero() {
+
         setServoToAngle(0);
     }
     private void setServoToAngle(double degrees) {
         currentAngle = degrees;
         servo.setPosition(Range.scale(degrees, -SERVO_DEGREES/2, SERVO_DEGREES/2, 0, 1));
+
+    }
+    public double getCurrentAngle() {
+        return currentAngle;
     }
 }
