@@ -20,7 +20,9 @@ public class TestWrist extends OpMode {
         if(gamepad1.x){
             wrist.zero();
         }
-        wrist.adjustAngle(-gamepad1.left_trigger);
-        wrist.adjustAngle(gamepad1.right_trigger);
+        wrist.adjustAngle(-gamepad1.left_trigger * 0.1);
+        wrist.adjustAngle(gamepad1.right_trigger * 0.1);
+
+        telemetry.addData("Wrist Angle", wrist.getCurrentAngle());
     }
 }
