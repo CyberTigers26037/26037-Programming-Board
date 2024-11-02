@@ -20,6 +20,13 @@ public class TestElbow extends OpMode {
         if(gamepad1.x){
             elbow.zero();
         }
+        if(gamepad1.y){
+            elbow.straight();
+        }
+        if(gamepad1.a){
+            elbow.down();
+
+        }
         elbow.adjustAngle(-gamepad1.left_trigger * 0.1);
         elbow.adjustAngle(gamepad1.right_trigger * 0.1);
 
