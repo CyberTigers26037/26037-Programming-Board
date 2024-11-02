@@ -24,6 +24,16 @@ public class TestPincher extends OpMode {
             pincher.zero();
         }
 
+        if (gamepad1.a) {
+
+            pincher.open();
+        }
+
+        if (gamepad1.b) {
+
+            pincher.close();
+        }
+
         pincher.adjustAngle(-gamepad1.left_trigger * 0.1);
 
         pincher.adjustAngle(gamepad1.right_trigger * 0.1);

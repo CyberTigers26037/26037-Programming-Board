@@ -10,6 +10,8 @@ import org.firstinspires.ftc.robotcore.external.navigation.Pose2D;
 public class Pincher {
 
     private static final double SERVO_DEGREES = 270;
+    private static final double MIN_SAFE_DEGREES = -90;
+    private static final double MAX_SAFE_DEGREES = -30;
     private double currentAngle;
     private Servo servo;
     public Pincher (HardwareMap hardwareMap) {
@@ -19,10 +21,12 @@ public class Pincher {
 
     public void open() {
 
+        setServoToAngle(MAX_SAFE_DEGREES);
     }
 
     public void close() {
 
+        setServoToAngle(MIN_SAFE_DEGREES);
     }
 
     public void adjustAngle(double degrees) {
@@ -35,6 +39,8 @@ public class Pincher {
         setServoToAngle(0);
     }
     private void setServoToAngle(double degrees) {
+
+        degrees = Range.clip(degrees, MIN_SAFE_DEGREES, MAX_SAFE_DEGREES);
         currentAngle = degrees;
         servo.setPosition(Range.scale(degrees, -SERVO_DEGREES/2, SERVO_DEGREES/2, 0, 1));
 
