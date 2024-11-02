@@ -1,9 +1,8 @@
 package org.firstinspires.ftc.teamcode.test;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 
-import org.firstinspires.ftc.teamcode.subassemblies.Pincher;
+import org.firstinspires.ftc.teamcode.subassembly.Pincher;
 
 @TeleOp
 public class TestPincher extends OpMode {
@@ -25,9 +24,13 @@ public class TestPincher extends OpMode {
             pincher.zero();
         }
 
-        pincher.adjustAngle(-gamepad1.left_trigger);
+        pincher.adjustAngle(-gamepad1.left_trigger * 0.1);
 
-        pincher.adjustAngle(gamepad1.right_trigger);
+        pincher.adjustAngle(gamepad1.right_trigger * 0.1);
+
+
+        telemetry.addData("Pincher Servo Angle: ", pincher.getCurrentAngle());
+        telemetry.update();
 
     }
 }

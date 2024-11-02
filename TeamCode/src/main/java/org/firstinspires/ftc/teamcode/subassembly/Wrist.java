@@ -27,7 +27,7 @@ public class Wrist {
     public void adjustAngle(double degrees){
         setServoToAngle(currentAngle+degrees);
     }
-    private void setServoToAngle(double degrees){
+    private void setServoToAngle(double degrees) {
         currentAngle = degrees;
         servo.setPosition(Range.scale(degrees, -SERVO_DEGREES / 2, SERVO_DEGREES / 2, 0, 1));
 
