@@ -14,9 +14,21 @@ public class Claw {
 
     }
 
-    public void straightSampleGrab(){
+    public void zero() {
+        elbow.zero();
+        wrist.zero();
+        pincher.zero();
+    }
+
+    public void prepareToPickupVerticalSample() {
         elbow.down();
         wrist.straight();
+        pincher.open();
+
+    }
+    public void prepareToPickupHorizontalSample() {
+        elbow.down();
+        wrist.right90();
         pincher.open();
 
     }
