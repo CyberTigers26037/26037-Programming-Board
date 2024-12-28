@@ -1,16 +1,14 @@
 package org.firstinspires.ftc.teamcode.nettles;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
-public class UseString extends OpMode {
+@Autonomous(name = "Nettles HelloWorld")
+
+public class NettlesHelloWorld extends OpMode{
     @Override
     public void init(){
-        String myName = "Kip Nettles";
-        int grade = 20;
-        telemetry.addData("Hello" , myName);
-        telemetry.addData("Grade", grade);
-
+        telemetry.addData("Hello", "Kip");
     }
     @Override
     public void loop(){

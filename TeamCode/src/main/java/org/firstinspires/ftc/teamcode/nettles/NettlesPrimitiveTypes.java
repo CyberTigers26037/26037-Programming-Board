@@ -2,8 +2,9 @@ package org.firstinspires.ftc.teamcode.nettles;
 import  com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
-public class PrimitiveTypes extends OpMode {
+@TeleOp(name = "Nettles PrimitiveTypes")
+
+public class NettlesPrimitiveTypes extends OpMode {
 @Override
     public void init() {
     int teamNumber = 16072;
