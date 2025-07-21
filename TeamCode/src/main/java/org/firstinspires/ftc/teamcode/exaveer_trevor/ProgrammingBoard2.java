@@ -15,4 +15,8 @@ public class ProgrammingBoard2 {
     public boolean isTouchSensorPressed() {
         return !touchSensor.getState();
     }
+
+    public boolean isTouchSensorPressed() {
+        return !touchSensor.getState();
+    }
 }

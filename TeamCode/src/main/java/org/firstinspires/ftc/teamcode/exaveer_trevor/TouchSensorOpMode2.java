@@ -13,9 +13,12 @@ public class TouchSensorOpMode2 extends OpMode {
 
     @Override
     public void loop(){
-        telemetry.addData("Touch pressed", board.isTouchSensorPressed());
+        if (board.isTouchSensorPressed()) {
+            telemetry.addData("Touch sensor", "Pressed");
+        }
+        else {
+            telemetry.addData("Touch sensor", "Not Pressed");
+        }
     }
-
-    // 6.5 Excise- Add isTouchSensorReleased() and send "Pressed" and "Not Pressed" instead of true or false
 
 }
