@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard8;
 
-@Autonomous()
+@Autonomous(name = "Exaveer AutoState3")
 public class AutoState3 extends OpMode {
     ProgrammingBoard8 board = new ProgrammingBoard8();
     String state = "START";
@@ -25,7 +25,7 @@ public class AutoState3 extends OpMode {
     public void loop() {
         telemetry.addData("State", state);
         switch (state) {
-            case "START:
+            case "START":
                 board.setServoPosition(0.5);
                 if (board.isTouchSensorPressed()) {
                     state = "WAIT_FOR_SENOR_RELEASE";

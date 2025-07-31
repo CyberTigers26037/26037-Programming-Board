@@ -5,11 +5,11 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard8;
 
-@Autonomous()
+@Autonomous(name = "Exaveer AutoState4")
 public class AutoState4 extends OpMode {
     enum State {
         START,
-        WAIT_FOR_SENOR_RELEASE,
+        WAIT_FOR_SENSOR_RELEASE,
         WAIT_FOR_POT_TURN,
         STOP,
         DONE
@@ -32,28 +32,28 @@ public class AutoState4 extends OpMode {
     public void loop() {
         telemetry.addData("State", state);
         switch (state) {
-            case "START:
+            case START:
                 board.setServoPosition(0.5);
                 if (board.isTouchSensorPressed()) {
-                    state = "WAIT_FOR_SENOR_RELEASE";
+                    state = State.WAIT_FOR_SENSOR_RELEASE;
                 }
                 break;
-            case "WAIT_FOR_SENOR_RELEASE":
+            case WAIT_FOR_SENSOR_RELEASE:
                 board.setServoPosition(0.0);
                 if (!board.isTouchSensorPressed()) {
-                    state = "WAIT_FOR_POT_TURN";
+                    state = State.WAIT_FOR_POT_TURN;
                 }
                 break;
-            case "WAIT_FOR_POT_TURN":
+            case WAIT_FOR_POT_TURN:
                 board.setServoPosition(1.0);
                 board.setMotorSpeed(0.5);
                 if (board.getPotAnalog() > 90) {
-                    state = "STOP";
+                    state = State.STOP;
                 }
                 break;
-            case "STOP":
+            case STOP:
                 board.setMotorSpeed(0.0);
-                state = "DONE";
+                state = State.DONE;
                 break;
             default:
                 telemetry.addData("Auto", "Finished");

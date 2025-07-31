@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard8;
 
-@TeleOp(name = "Trevor & Exaveer ToggleOpMode")
+@TeleOp(name = "Exaveer ToggleOpMode")
 public class ToggleOpMode extends OpMode {
     ProgrammingBoard8 board = new ProgrammingBoard8();
     boolean aAlreadyPressed;

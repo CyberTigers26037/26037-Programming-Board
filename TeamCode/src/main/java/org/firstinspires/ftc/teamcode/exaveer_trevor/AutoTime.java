@@ -5,8 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard8;
 
-@Autonomous()
-public class AutoState4 extends OpMode {
+@Autonomous(name = "Exaveer AutoTime")
+public class AutoTime extends OpMode {
     enum State {
         START,
         SECOND_STEP,

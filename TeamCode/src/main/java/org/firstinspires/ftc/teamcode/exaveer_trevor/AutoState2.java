@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard8;
 
-@Autonomous()
+@Autonomous(name = "Exaveer AutoState2")
 public class AutoState2 extends OpMode {
     ProgrammingBoard8 board = new ProgrammingBoard8();
     int state;
