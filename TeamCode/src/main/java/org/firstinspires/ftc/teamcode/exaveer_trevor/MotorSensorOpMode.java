@@ -3,8 +3,9 @@ package org.firstinspires.ftc.teamcode.exaveer_trevor;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.exaveer_trevor.ProgrammingBoard4;
+import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard4;
 
+@TeleOp(name = "Trevor & Exaveer MotorOpMode")
 public class MotorSensorOpMode extends OpMode {
     ProgrammingBoard4 board = new ProgrammingBoard4();
     @Override
@@ -14,7 +15,7 @@ public class MotorSensorOpMode extends OpMode {
 
     @Override
     public void loop(){
-        if(gamepad1.a) {
+        if(board.isTouchSensorPressed()) {
             board.setMotorSpeed(0.5);
         }
         else {

@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.exaveer_trevor;
+package org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms;
 
 import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;

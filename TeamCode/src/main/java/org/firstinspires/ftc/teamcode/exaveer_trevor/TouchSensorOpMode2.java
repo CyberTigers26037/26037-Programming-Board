@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode.exaveer_trevor;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard2;
+
 @TeleOp(name = "Trevor & Exaveer TouchSensorOpMode2")
 public class TouchSensorOpMode2 extends OpMode {
     ProgrammingBoard2 board = new ProgrammingBoard2();
@@ -13,9 +15,12 @@ public class TouchSensorOpMode2 extends OpMode {
 
     @Override
     public void loop(){
-        telemetry.addData("Touch pressed", board.isTouchSensorPressed());
+        if (board.isTouchSensorPressed()) {
+            telemetry.addData("Touch sensor", "Pressed");
+        }
+        else {
+            telemetry.addData("Touch sensor", "Not Pressed");
+        }
     }
-
-    // 6.5 Excise- Add isTouchSensorReleased() and send "Pressed" and "Not Pressed" instead of true or false
 
 }

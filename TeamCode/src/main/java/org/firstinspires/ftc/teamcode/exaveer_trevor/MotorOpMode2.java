@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.exaveer_trevor;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.exaveer_trevor.ProgrammingBoard4;
+import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard4;
 
 @TeleOp(name = "Trevor & Exaveer MotorOpMode")
 public class MotorOpMode2 extends OpMode {

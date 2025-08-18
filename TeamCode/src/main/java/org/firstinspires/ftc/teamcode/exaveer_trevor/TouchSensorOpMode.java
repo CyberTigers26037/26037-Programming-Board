@@ -4,7 +4,7 @@ package org.firstinspires.ftc.teamcode.exaveer_trevor;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.exaveer_trevor.ProgrammingBoard1;
+import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard1;
 
 @TeleOp(name = "Trevor & Exaveer TouchSensorOpMode")
 public class TouchSensorOpMode extends OpMode {

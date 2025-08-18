@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.exaveer_trevor.mechanisms.ProgrammingBoard4;
 
 @TeleOp(name = "Trevor & Exaveer MotorOpMode")
-public class MotorOpMode extends OpMode {
+public class MotorGamepadOpMode extends OpMode {
     ProgrammingBoard4 board = new ProgrammingBoard4();
     @Override
     public void init(){
@@ -15,6 +15,12 @@ public class MotorOpMode extends OpMode {
 
     @Override
     public void loop(){
-        board.setMotorSpeed(0.5);
+        if(gamepad1.a) {
+            board.setMotorSpeed(0.5);
+        }
+        else {
+            board.setMotorSpeed(0.0);
+        }
+        telemetry.addData("Motor rotations", board.getMotorRotations());
     }
 }
