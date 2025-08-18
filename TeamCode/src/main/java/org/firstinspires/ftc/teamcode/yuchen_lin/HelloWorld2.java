@@ -1,18 +1,19 @@
 package org.firstinspires.ftc.teamcode.yuchen_lin;
 
-
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Hello")
+@TeleOp()
 public class HelloWorld2 extends OpMode {
+    @Override
     public void init() {
-
-        telemetry.addData("Hellow", "67");
     }
+
     @Override
     public void loop() {
-
+        if(gamepad1.left_stick_y <0) {
+            telemetry.addData("Left stick", " is negative");
+        }
+        telemetry.addData("Left stick y", gamepad1.left_stick_y);
     }
 }
-
