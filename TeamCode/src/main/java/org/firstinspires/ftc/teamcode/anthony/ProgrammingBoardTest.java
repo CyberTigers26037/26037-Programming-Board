@@ -8,10 +8,10 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.AnalogInput;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
 import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.util.Range;
 
 @SuppressWarnings("unused")
@@ -22,7 +22,7 @@ public class ProgrammingBoardTest extends OpMode {
     private DcMotor motor;
     private Servo servo;
     private AnalogInput potentiometer;
-    private TouchSensor touchSensor;
+    private DigitalChannel touchSensor;
     private NormalizedColorSensor colorSensor;
 
     @Override
@@ -33,7 +33,8 @@ public class ProgrammingBoardTest extends OpMode {
         motor = hardwareMap.get(DcMotor.class, "motor");
         servo = hardwareMap.get(Servo.class, "servo");
         potentiometer = hardwareMap.analogInput.get("pot");
-        touchSensor = hardwareMap.get(TouchSensor.class, "touch_sensor");
+        touchSensor = hardwareMap.get(DigitalChannel.class, "touch_sensor");
+        touchSensor.setMode(DigitalChannel.Mode.INPUT);
         colorSensor = hardwareMap.get(NormalizedColorSensor.class, "sensor_color_distance");
     }
 
@@ -66,7 +67,7 @@ public class ProgrammingBoardTest extends OpMode {
         telemetry.addData("Color Sensor Hue", "%.3f", hsvValues[0]);
 
         // Read touch sensor state
-        telemetry.addData("Touch Sensor: ", touchSensor.isPressed() ? "On" : "Off");
+        telemetry.addData("Touch Sensor: ", touchSensor.getState() ? "Off" : "On");
 
         telemetry.update();
     }
