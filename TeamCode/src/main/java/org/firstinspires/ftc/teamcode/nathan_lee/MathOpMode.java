@@ -6,7 +6,7 @@ import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.gam
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Nathan MathOpMode")
+@TeleOp(name = "Nathan Lee MathOpMode")
 public class MathOpMode extends OpMode {
     @Override
     public void init(){

@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.bryceson;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "bryceson_UseString")
+@TeleOp(name = "Bryceson_UseString")
 public class UseString extends OpMode {
     @Override
     public void init() {
