@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ashlee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp (name = "Ashlee Use Robot Location OpMode")
+@TeleOp (name = "Ashlee UseRobotLocationOpMode")
 public class UseRobotLocationOpMode extends OpMode {
     RobotLocation robotLocation = new RobotLocation(0);
 

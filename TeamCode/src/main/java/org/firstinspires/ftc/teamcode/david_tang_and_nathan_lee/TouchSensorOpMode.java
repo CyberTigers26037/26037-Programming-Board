@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
-@TeleOp(name = "David and Nathan TouchSensorOpMode")
+@TeleOp(name = "David & Nathan TouchSensorOpMode")
 
 public class TouchSensorOpMode extends OpMode {
 

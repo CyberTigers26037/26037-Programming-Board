@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.dax;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="DaxIfElseIfOpMode")
+@TeleOp(name ="Dax IfElseIfOpMode")
 public class IfElseIfOpMode extends OpMode {
     @Override
     public void init() {

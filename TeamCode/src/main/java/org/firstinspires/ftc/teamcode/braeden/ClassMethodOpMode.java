@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.braeden;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Braeden ClassMethod")
+@TeleOp(name = "Braeden ClassMethodOpMode")
 public class ClassMethodOpMode extends OpMode {
 
     @Override

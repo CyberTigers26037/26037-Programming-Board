@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.braeden;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name = "Braeden GamepadOPMode")
 public class GamepadOPMode extends OpMode {
     @Override
     public void init() {

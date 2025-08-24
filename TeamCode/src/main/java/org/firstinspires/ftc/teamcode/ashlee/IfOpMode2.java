@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ashlee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Ashlee If OpMode2")
+@TeleOp(name = "Ashlee IfOpMode2")
 public class IfOpMode2 extends OpMode {
     @Override
     public void init() {

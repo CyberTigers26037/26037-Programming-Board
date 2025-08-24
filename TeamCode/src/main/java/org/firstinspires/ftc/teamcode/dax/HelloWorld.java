@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.dax;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="dax HelloWorld")
+@TeleOp(name ="Dax HelloWorld")
 public class HelloWorld extends OpMode {
 
 
