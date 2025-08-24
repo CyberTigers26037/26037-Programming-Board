@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.david_tang_and_nathan_lee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 // This is challenge 4.6
-@TeleOp(name = "David and Nathan DavidNathanTurboButton")
+@TeleOp(name = "David & Nathan TurboButton")
 public class TurboButton extends OpMode {
 
 

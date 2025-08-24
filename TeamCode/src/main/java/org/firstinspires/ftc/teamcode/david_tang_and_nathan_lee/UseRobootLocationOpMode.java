@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.teamcode.david_tang_and_nathan_lee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-@TeleOp(name = "David and Nathan UseRobootLocationOpMode")
+@TeleOp(name = "David & Nathan UseRobootLocationOpMode")
 public class UseRobootLocationOpMode extends OpMode{
     RobotLocation robotLocation = new RobotLocation(0);
     private boolean leftAlreadyPressed=false;

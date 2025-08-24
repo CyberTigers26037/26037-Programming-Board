@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.braeden;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Braeden's UseString")
+@TeleOp(name = "Braeden UseString")
 public class UseString extends OpMode {
     @Override
     public void init() {

@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.yuchen_lin;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name = "Yuchen HelloWorld2")
 public class HelloWorld2 extends OpMode {
     @Override
     public void init() {

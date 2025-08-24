@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings("unused")
-@TeleOp(name = "Caleb Gamepad")
+@TeleOp(name = "Caleb GamepadOpMode")
 public class GamepadOpMode extends OpMode {
     @Override
     public void init() {
