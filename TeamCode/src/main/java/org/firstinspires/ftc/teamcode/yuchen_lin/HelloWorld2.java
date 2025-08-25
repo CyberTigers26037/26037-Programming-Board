@@ -3,17 +3,21 @@ package org.firstinspires.ftc.teamcode.yuchen_lin;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Yuchen HelloWorld2")
-public class HelloWorld2 extends OpMode {
-    @Override
-    public void init() {
-    }
+@TeleOp
+public class UseRobotLocationOpMode extends OpMode {
+    RobotLocation robotLocation = new UseRobotLocationOpMode(0);
 
     @Override
-    public void loop() {
-        if(gamepad1.left_stick_y <0) {
-            telemetry.addData("Left stick", " is negative");
+    public void init() {
+        robotLocation.setAngle(0)
+    }
+    @Overridepublic void loop() {
+        if (gamepad1.a) {
+            robotLocation.turn(0.1);
+        } else if (gamepad1.b) {
+            robotLocation.turn(-0.1)
         }
-        telemetry.addData("Left stick y", gamepad1.left_stick_y);
+        telemetry.addData("Location", robotLocation);
+        telemetry.addData("Heading", robotLocation.getHeading());
     }
 }
