@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode.dax;
 
 public class RobotLocation{
     double angle;
+    double x;
+    double y;
 
     public RobotLocation(double angle){
         this.angle = angle;
@@ -28,5 +30,26 @@ public class RobotLocation{
     }
     public void setAngle(double angle){
         this.angle = angle;
+    }
+    public double getAngle(){
+        return angle;
+    }
+    public double getX(){
+        return x;
+    }
+    public void changeX(double change){
+        x += change;
+    }
+    public void setX(double x){
+        this.x = x;
+    }
+    public double getY(){
+        return y;
+    }
+    public void changeY(double change){
+        y += change;
+    }
+    public void setY(double y){
+        this.y = y;
     }
 }
