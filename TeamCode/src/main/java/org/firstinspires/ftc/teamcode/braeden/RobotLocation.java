@@ -59,9 +59,9 @@ public class RobotLocation {
         this.y += change;
     }
 
-    public double setY(){
+    public void setY(double y){
 
-        return y;
+        this.y =y;
     }
 
 
