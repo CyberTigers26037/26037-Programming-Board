@@ -8,7 +8,7 @@ public class TestMotor extends TestItem {
     private double speed;
     private DcMotor motor;
 
-    protected TestMotor(String description, double speed, DcMotor motor) {
+    public TestMotor(String description, double speed, DcMotor motor) {
         super(description);
         this.speed = speed;
         this.motor = motor;

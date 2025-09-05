@@ -10,7 +10,7 @@ public class TestAnalogInput extends TestItem {
     private double min;
     private double max;
 
-    protected TestAnalogInput(String description, AnalogInput analogInput, double min, double max) {
+    public TestAnalogInput(String description, AnalogInput analogInput, double min, double max) {
         super(description);
         this.analogInput = analogInput;
         this.min = min;
