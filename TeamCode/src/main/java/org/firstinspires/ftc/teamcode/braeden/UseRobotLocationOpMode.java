@@ -26,14 +26,18 @@ public class UseRobotLocationOpMode extends OpMode {
         if(gamepad1.dpad_right){
             robotLocation.changeX(0.1);
         }
-        if(gamepad1.dpad_up){
-//            robotLocation.changeY(0.1);
+        if(gamepad1.dpad_up) {
+            robotLocation.changeY(0.1);
+        }
 
+        if (gamepad1.dpad_down){
+            robotLocation.changeY(-0.1);
         }
         telemetry.addData("Location", robotLocation);
         telemetry.addData("Heading", robotLocation.getHeading());
         telemetry.addData("GetAngle", robotLocation.getAngle());
         telemetry.addData("X",robotLocation.getX() );
+        telemetry.addData("Y",robotLocation.getY() );
     }
 
 
