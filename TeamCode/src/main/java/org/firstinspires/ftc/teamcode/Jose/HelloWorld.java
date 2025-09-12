@@ -1,14 +1,13 @@
-package org.firstinspires.ftc.teamcode.jacob;
+package org.firstinspires.ftc.teamcode.Jose;
 
-import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@Autonomous(name="Jacob HelloWorld")
+@TeleOp()
 public class HelloWorld extends OpMode {
     @Override
     public void init() {
-        telemetry.addData("Hello","Jacob");
+        telemetry.addData("Hello", "World");
     }
 
     @Override
@@ -16,3 +15,4 @@ public class HelloWorld extends OpMode {
 
     }
 }
+
