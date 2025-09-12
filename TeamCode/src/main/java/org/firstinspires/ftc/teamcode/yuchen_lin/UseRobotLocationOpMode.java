@@ -3,19 +3,21 @@ package org.firstinspires.ftc.teamcode.yuchen_lin;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
+import org.firstinspires.ftc.teamcode.ashlee.RobotLocation;
+
+@TeleOp(name = "Yuchen UseRobotLocationOpMode")
 public class UseRobotLocationOpMode extends OpMode {
-    RobotLocation robotLocation = new UseRobotLocationOpMode(0);
+    RobotLocation robotLocation = new RobotLocation(7);
 
     @Override
     public void init() {
-        robotLocation.setAngle(0)
+        robotLocation.setAngle(0);
     }
-    @Overridepublic void loop() {
+    @Override public void loop() {
         if (gamepad1.a) {
             robotLocation.turn(0.1);
         } else if (gamepad1.b) {
-            robotLocation.turn(-0.1)
+            robotLocation.turn(-0.1);
         }
         telemetry.addData("Location", robotLocation);
         telemetry.addData("Heading", robotLocation.getHeading());

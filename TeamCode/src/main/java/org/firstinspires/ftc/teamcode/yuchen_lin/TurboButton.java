@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.yuchen_lin;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "TurboButton")
+@TeleOp(name = "Yuchen TurboButton")
 public class TurboButton extends OpMode {
     @Override
     public void init() {
