@@ -61,7 +61,7 @@ import java.util.List;
  * Use Android Studio to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.
  */
-@SuppressWarnings("Unused")
+@SuppressWarnings("unused")
 @TeleOp(name = "Exaveer & Jose - DetectObeliskAprilTag")
 public class DetectObeliskAprilTag extends LinearOpMode {
 
@@ -138,9 +138,8 @@ public class DetectObeliskAprilTag extends LinearOpMode {
      * Add telemetry about AprilTag detections.
      */
     private boolean detectObeliskColor() {
-
         List<AprilTagDetection> currentDetections = aprilTag.getDetections();
-        telemetry.addData("# AprilTags Detected", currentDetections.size());
+        // telemetry.addData("# AprilTags Detected", currentDetections.size());
 
         // Detects what colors need to be found on obelisk
         for (AprilTagDetection detection : currentDetections) {
@@ -159,6 +158,7 @@ public class DetectObeliskAprilTag extends LinearOpMode {
             visionPortal.close();
         }   // end for() loop
         return false;
+
     } // end method telemetryAprilTag()
 
 }   // end class
