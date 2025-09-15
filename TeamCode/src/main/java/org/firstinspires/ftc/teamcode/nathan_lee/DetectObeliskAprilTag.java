@@ -27,7 +27,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.teamcode.exaveer;
+package org.firstinspires.ftc.teamcode.nathan_lee;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -62,7 +62,8 @@ import java.util.List;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.
  */
 @SuppressWarnings("unused")
-@TeleOp(name = "Exaveer & Jose - DetectObeliskAprilTag")
+@TeleOp(name = "Nathan DetectObeliskAprilTag")
+
 public class DetectObeliskAprilTag extends LinearOpMode {
 
     private static final boolean USE_WEBCAM = true;  // true for webcam, false for phone camera
@@ -90,7 +91,8 @@ public class DetectObeliskAprilTag extends LinearOpMode {
 
         if (opModeIsActive()) {
             while (opModeIsActive()) {
-                if (detectObeliskColor()){
+
+                if (detectObeliskAprilTag()){
                     visionPortal.stopStreaming();
                 }
 
@@ -104,6 +106,7 @@ public class DetectObeliskAprilTag extends LinearOpMode {
                 } else if (gamepad1.dpad_up) {
                     visionPortal.resumeStreaming();
                 }
+
 
                 // Share the CPU.
                 sleep(20);
@@ -126,10 +129,10 @@ public class DetectObeliskAprilTag extends LinearOpMode {
         // Create the vision portal the easy way.
         if (USE_WEBCAM) {
             visionPortal = VisionPortal.easyCreateWithDefaults(
-                hardwareMap.get(WebcamName.class, "Webcam 1"), aprilTag);
+                    hardwareMap.get(WebcamName.class, "Webcam 1"), aprilTag);
         } else {
             visionPortal = VisionPortal.easyCreateWithDefaults(
-                BuiltinCameraDirection.BACK, aprilTag);
+                    BuiltinCameraDirection.BACK, aprilTag);
         }
 
     }   // end method initAprilTag()
@@ -137,28 +140,27 @@ public class DetectObeliskAprilTag extends LinearOpMode {
     /**
      * Add telemetry about AprilTag detections.
      */
-    private boolean detectObeliskColor() {
+    private boolean detectObeliskAprilTag() {
+
         List<AprilTagDetection> currentDetections = aprilTag.getDetections();
-        // telemetry.addData("# AprilTags Detected", currentDetections.size());
 
-        // Detects what colors need to be found on obelisk
+
+        // Step through the list of detections and display info for each one.
         for (AprilTagDetection detection : currentDetections) {
-            if(detection.id == 21) {
-                telemetry.addLine("Green Purple Purple");
+            if (detection.id == 21) {
+                telemetry.addData("Pattern:", "Green, Purple, Purple");
+                return true;
+            } else if (detection.id == 22) {
+                telemetry.addData("Pattern:", "Purple, Green, Purple");
+                return true;
+            } else if (detection.id == 23) {
+                telemetry.addData("Pattern:", "Purple, Purple, Green");
                 return true;
             }
-            if (detection.id == 22) {
-                telemetry.addLine("Purple Green Purple");
-                return true;
-            }
-            if (detection.id == 23) {
-                telemetry.addLine("Purple Purple Green");
-                return true;
-            }
-            visionPortal.close();
-        }   // end for() loop
+
+        }
         return false;
+    }
+}
 
-    } // end method telemetryAprilTag()
 
-}   // end class
