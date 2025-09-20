@@ -13,7 +13,7 @@ public class primitiveTypes extends OpMode {
 
         telemetry.addData("Team Number", teamNumber);
         telemetry.addData("Motor Speed", motorSpeed);
-        telemetry.addData("Touch Sensor", touchSensorPressed);
+        //telemetry.addData("Touch Sensor", touchSensorPressed);
     }
 
     @Override
