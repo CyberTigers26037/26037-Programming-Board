@@ -1,6 +1,7 @@
 package Limelight;
 
 import com.qualcomm.hardware.limelightvision.LLResult;
+import com.qualcomm.hardware.limelightvision.LLResultTypes;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -43,6 +44,13 @@ public class AprilTagLimeLightTest extends OpMode {
             telemetry.addData("Tx", llResult.getTx());
             telemetry.addData("Ty", llResult.getTx());
             telemetry.addData("Ta", llResult.getTa());
+
+            for (LLResultTypes.FiducialResult fr : llResult.getFiducialResults()) {
+                telemetry.addData("AprilTag ID", fr.getFiducialId());
+            }
+        }
+        else {
+            telemetry.addData("AprilTag ID", "None");
         }
 
 

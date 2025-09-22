@@ -1,11 +1,10 @@
-package org.firstinspires.ftc.teamcode.exaveer;
+package Limelight;
 
 import com.qualcomm.hardware.limelightvision.LLResult;
+import com.qualcomm.hardware.limelightvision.LLResultTypes;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.IMU;
-
-import java.util.List;
 
 public class AprilTagDecoderLimelight {
     private Limelight3A limelight;
@@ -22,22 +21,20 @@ public class AprilTagDecoderLimelight {
     }
 
     public String findObeliskArtifactOrder() {
-        /*
         LLResult result = limelight.getLatestResult();
 
-        for (AprilTagDetection detection : currentDetections) {
-            if (detection.id == 21) {
-                return "Green Purple Purple";
+        if (result != null && result.isValid()) {
+            for (LLResultTypes.FiducialResult detection : result.getFiducialResults()) {
+                int id = detection.getFiducialId();
+                if (id == 21) {
+                    return "Green Purple Purple";
+                } else if (id == 22) {
+                    return "Purple Green Purple";
+                } else if (id == 23) {
+                    return "Purple Purple Green";
+                }
             }
-            if (detection.id == 22) {
-                return "Purple Green Purple";
-            }
-            if (detection.id == 23) {
-                return "Purple Purple Green";
-            }
-            visionPortal.close();
         }
-         */
         return null;
     }
 
