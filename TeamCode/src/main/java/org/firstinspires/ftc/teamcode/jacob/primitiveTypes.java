@@ -9,7 +9,7 @@ public class primitiveTypes extends OpMode {
     public void init() {
         int teamNumber=16072;
         double motorSpeed=0.5;
-        boolean touchSensorPressed;
+        boolean touchSensorPressed = true;
 
         telemetry.addData("Team Number", teamNumber);
         telemetry.addData("Motor Speed", motorSpeed);
