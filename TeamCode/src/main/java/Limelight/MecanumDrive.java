@@ -2,6 +2,7 @@ package Limelight;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 /**
  * This is an example minimal implementation of the mecanum drivetrain
@@ -29,10 +30,12 @@ public class MecanumDrive extends OpMode {
 
         // Name strings must match up with the config on the Robot Controller
         // app.
-        front_left = hardwareMap.get(DcMotor.class, "front_left");
-        front_right = hardwareMap.get(DcMotor.class, "front_right");
-        back_left = hardwareMap.get(DcMotor.class, "back_left");
-        back_right = hardwareMap.get(DcMotor.class, "back_right");
+        front_left = hardwareMap.get(DcMotor.class, "frontLeftMotor");
+        front_right = hardwareMap.get(DcMotor.class, "frontRightMotor");
+        back_left = hardwareMap.get(DcMotor.class, "backLeftMotor");
+        back_right = hardwareMap.get(DcMotor.class, "backRightMotor");
+        front_left.setDirection(DcMotorSimple.Direction.REVERSE);
+        back_left.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     @Override
@@ -40,7 +43,7 @@ public class MecanumDrive extends OpMode {
 
         // Mecanum drive is controlled with three axes: drive (front-and-back),
         // strafe (left-and-right), and twist (rotating the whole chassis).
-        double drive = gamepad1.left_stick_y;
+        double drive = -gamepad1.left_stick_y;
         double strafe = gamepad1.left_stick_x;
         double twist = gamepad1.right_stick_x;
 
@@ -95,5 +98,7 @@ public class MecanumDrive extends OpMode {
         front_right.setPower(speeds[1]);
         back_left.setPower(speeds[2]);
         back_right.setPower(speeds[3]);
+
+
     }
 }
