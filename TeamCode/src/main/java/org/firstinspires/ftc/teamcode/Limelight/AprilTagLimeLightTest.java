@@ -1,9 +1,10 @@
-package Limelight;
+package org.firstinspires.ftc.teamcode.Limelight;
 
 import com.qualcomm.hardware.limelightvision.LLResult;
 import com.qualcomm.hardware.limelightvision.LLResultTypes;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.IMU;
@@ -13,8 +14,6 @@ import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 
 @TeleOp(name = "LimeLight April Tag Test")
 public class AprilTagLimeLightTest extends OpMode {
-
-
     private Limelight3A limelight;
     private IMU imu;
 
@@ -37,13 +36,22 @@ public class AprilTagLimeLightTest extends OpMode {
     @Override
     public void loop(){
         YawPitchRollAngles orientation = imu.getRobotYawPitchRollAngles();
+
+        if (orientation.getYaw() < -3.56) {
+            requestOpModeStop();
+            return;
+        }
+
         limelight.updateRobotOrientation(orientation.getYaw());
         LLResult llResult = limelight.getLatestResult();
         if (llResult != null && llResult.isValid()) {
             Pose3D botPose = llResult.getBotpose();
             telemetry.addData("Tx", llResult.getTx());
-            telemetry.addData("Ty", llResult.getTx());
+            telemetry.addData("Ty", llResult.getTy());
             telemetry.addData("Ta", llResult.getTa());
+            telemetry.addData("Yaw", orientation.getYaw());
+            telemetry.addData("Pitch", orientation.getPitch());
+            telemetry.addData("Roll", orientation.getRoll());
 
             for (LLResultTypes.FiducialResult fr : llResult.getFiducialResults()) {
                 telemetry.addData("AprilTag ID", fr.getFiducialId());
