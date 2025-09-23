@@ -3,6 +3,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
 /**
  * This is an example minimal implementation of the mecanum drivetrain
@@ -24,6 +25,7 @@ public class MecanumDrive extends OpMode {
     private DcMotor front_right = null;
     private DcMotor back_left = null;
     private DcMotor back_right = null;
+    private LimeLightAprilTag limeLightAprilTag;
 
     @Override
     public void init() {
@@ -36,6 +38,11 @@ public class MecanumDrive extends OpMode {
         back_right = hardwareMap.get(DcMotor.class, "backRightMotor");
         front_left.setDirection(DcMotorSimple.Direction.REVERSE);
         back_left.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        limeLightAprilTag = new LimeLightAprilTag();
+        limeLightAprilTag.init(hardwareMap);
+
+        limeLightAprilTag.beginDetectTeamBlue();
     }
 
     @Override
@@ -99,6 +106,12 @@ public class MecanumDrive extends OpMode {
         back_left.setPower(speeds[2]);
         back_right.setPower(speeds[3]);
 
+
+        if(gamepad1.a){
+        double goalAngle = limeLightAprilTag.detectGoalAngle();
+
+        telemetry.addData("goalAngle", goalAngle);
+        }
 
     }
 }
