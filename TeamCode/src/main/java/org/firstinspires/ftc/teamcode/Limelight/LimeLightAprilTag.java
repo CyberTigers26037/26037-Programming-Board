@@ -48,13 +48,13 @@ public class LimeLightAprilTag {
         return null;
     }
 
-    public double detectGoalAngle(){
+    public Double detectGoalAngle(){
         LLResult result = limelight.getLatestResult();
 
         if (result != null && result.isValid()) {
             return result.getTx();
         }
-       return 0;
+       return null;
     }
 
     public void endStreaming() {
