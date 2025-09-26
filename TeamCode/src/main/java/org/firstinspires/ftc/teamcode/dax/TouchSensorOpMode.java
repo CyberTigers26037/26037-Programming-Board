@@ -3,11 +3,11 @@ package org.firstinspires.ftc.teamcode.dax;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.dax.mechanisms.ProgrammingBoard1;
+import org.firstinspires.ftc.teamcode.dax.mechanisms.ProgrammingBoard2;
 
 @TeleOp(name ="DaxTouchSensorOpMode")
 public class TouchSensorOpMode extends OpMode {
-    ProgrammingBoard1 board = new ProgrammingBoard1();
+    ProgrammingBoard2 board = new ProgrammingBoard2();
     @Override
     public void init() {
         board.init(hardwareMap);
@@ -15,6 +15,12 @@ public class TouchSensorOpMode extends OpMode {
 
     @Override
     public void loop() {
-        telemetry.addData("TouchSensor",board.getTouchSensorState());
+        telemetry.addData("ButtonPressed",board.getTouchSensorState());
+        if(board.getTouchSensorState()){
+            telemetry.addLine("TouchSensor : Pressed");
+        }
+        else{
+            telemetry.addLine("TouchSensor : Not Pressed");
+        }
     }
 }
