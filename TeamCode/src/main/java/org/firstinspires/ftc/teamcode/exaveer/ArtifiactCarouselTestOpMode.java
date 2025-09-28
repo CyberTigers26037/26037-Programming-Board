@@ -17,18 +17,33 @@ public class ArtifiactCarouselTestOpMode extends OpMode {
 
     @Override
     public void loop() {
-        if(gamepad1.x) {
-            carousel.moveCarouselToIntakePosition(1); //pos1 -90 degrees
-        }
-        if(gamepad1.y) {
-            carousel.moveCarouselToIntakePosition(2); //pos2 -60 degrees
-        }
-        if(gamepad1.b) {
-            carousel.moveCarouselToIntakePosition(3); //pos3 -30 degrees
-        }
         if(gamepad1.aWasPressed()) {
             intakeActive = !intakeActive;
         }
-        telemetry.addData("Active", intakeActive);
+        if(intakeActive) {
+            if(gamepad1.x) {
+                carousel.moveCarouselToIntakePosition(1); //pos1 -90 degrees
+            }
+            if(gamepad1.y) {
+                carousel.moveCarouselToIntakePosition(2); //pos2 -60 degrees
+            }
+            if(gamepad1.b) {
+                carousel.moveCarouselToIntakePosition(3); //pos3 -30 degrees
+            }
+        }
+        else {
+            if(gamepad1.x) {
+                carousel.moveCarouselToFirePosition(1); //pos1 -90 degrees
+            }
+            if(gamepad1.y) {
+                carousel.moveCarouselToFirePosition(2); //pos2 -60 degrees
+            }
+            if(gamepad1.b) {
+                carousel.moveCarouselToFirePosition(3); //pos3 -30 degrees
+            }
+        }
+
+        telemetry.addData("Mode", intakeActive ? "Intake" : "Firing");
+        telemetry.update();
     }
 }
