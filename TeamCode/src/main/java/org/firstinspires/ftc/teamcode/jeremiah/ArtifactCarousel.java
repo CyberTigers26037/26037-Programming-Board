@@ -6,8 +6,8 @@ import com.qualcomm.robotcore.util.Range;
 public class ArtifactCarousel {
     private final Servo servo;
 
-    public ArtifactCarousel(HardwareMap hwmap) {
-        servo = hwmap.get(Servo.class, "carouselServo");
+    public ArtifactCarousel(HardwareMap hwMap) {
+        servo = hwMap.get(Servo.class, "carouselServo");
     }
 
     public void moveCarouselToIntakePosition(int position) {
