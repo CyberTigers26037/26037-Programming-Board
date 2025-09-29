@@ -32,8 +32,9 @@ public class ACE extends OpMode {
             }
         }
         else {
-            gamepad1.x) {
+            if (gamepad1.x){
                 carousel.moveCarouselToIntakePosition(1);
+            }
         }
     }
 }
