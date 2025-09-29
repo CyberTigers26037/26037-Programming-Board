@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class listing extends OpMode{
     @Override
     public void init() {
-        String myName= "Jeremiah Falcon";
+        String myName= "Jacob Riley";
 
         telemetry.addData("Hello",myName);
     }
