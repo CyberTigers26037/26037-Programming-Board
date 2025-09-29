@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.util.Range;
 public class ArtifactCarousel {
     private final Servo servo;
 
-    public ArtifactCarousel (HardwareMap hwmap) {
+    public ArtifactCarousel(HardwareMap hwmap) {
         servo = hwmap.get(Servo.class, "carouselServo");
     }
 
@@ -24,8 +24,28 @@ public class ArtifactCarousel {
         }
     }
 
-    private static final double SERVO_DEGREES=180;
+    private static final double SERVO_DEGREES = 180;
+
     private void setServoToAngle(Servo servo, double degrees) {
-        servo.setPosition(Range.scale(degrees,-SERVO_DEGREES/2, SERVO_DEGREES/2, 0, 1));
+        servo.setPosition(Range.scale(degrees, -SERVO_DEGREES / 2, SERVO_DEGREES / 2, 0, 1));
     }
+
+
+    public void moveCarouselToFirePosition(int position) {
+        switch (position) {
+            case 1:
+                setServoToAngle(servo, 0);
+                break;
+            case 2:
+                setServoToAngle(servo, 45);
+                break;
+            case 3:
+                setServoToAngle(servo, 90);
+                break;
+
+
+        }
+
+    }
+
 }
