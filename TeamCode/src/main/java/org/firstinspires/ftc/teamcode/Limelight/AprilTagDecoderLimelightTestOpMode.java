@@ -10,14 +10,11 @@ import org.firstinspires.ftc.teamcode.exaveer.ArtifactDetector;
 public class AprilTagDecoderLimelightTestOpMode extends OpMode {
     private String obeliskArtifactOrder;
     private AprilTagDecoderLimelight aprilTagDecoder;
-    private ArtifactDetector detector;
 
     @Override
     public void init() {
         aprilTagDecoder = new AprilTagDecoderLimelight();
         aprilTagDecoder.init(hardwareMap);
-
-        detector = new ArtifactDetector(hardwareMap);
     }
 
     @Override
@@ -32,7 +29,6 @@ public class AprilTagDecoderLimelightTestOpMode extends OpMode {
         if (obeliskArtifactOrder != null) {
             telemetry.addData("Obelisk Artifact Order: ", obeliskArtifactOrder);
         }
-        telemetry.addData("Artifact Color", detector.detectArtifactColor());
         telemetry.update();
     }
 }
