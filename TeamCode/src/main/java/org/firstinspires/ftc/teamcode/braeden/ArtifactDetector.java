@@ -1,7 +1,5 @@
 package org.firstinspires.ftc.teamcode.braeden;
 
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.hardwareMap;
-
 import android.graphics.Color;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -22,12 +20,15 @@ public class ArtifactDetector {
         NormalizedRGBA colors = colorSensor.getNormalizedColors();
         Color.colorToHSV(colors.toColor(), hsvValues);
         float hue = hsvValues[0];
-        return Float.toString(hue);
-    }
+        if ((hue >= 225) && (hue <= 240)) {
+            return "Purple";
+        }
+        if ((hue >= 145) && (hue <= 180)) {
+            return "Green";
+        } else {
+            return "None";
+        }
 
-   /*public void init(hardwareMap) {
-        detector = new ArtifactDetector (hardwareMap);
     }
-
-    */
 }
+

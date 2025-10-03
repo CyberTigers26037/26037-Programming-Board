@@ -4,13 +4,15 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings ("unused")
-@TeleOp (name="DaxAndBraeden ArtifactCarouselTestOpMode")
+@TeleOp (name="Braeden and Dax ArtifactCarouselTestOpMode")
 public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
+    private ArtifactDetector detector;
 
     @Override
     public void init() {
         carousel = new ArtifactCarousel(hardwareMap);
+        detector = new ArtifactDetector(hardwareMap);
     }
 
     boolean intakeActive = false;
@@ -37,8 +39,12 @@ public class ArtifactCarouselTestOpMode extends OpMode {
         }
         if (gamepad1.aWasPressed()) {
             intakeActive = !intakeActive;
-
-            telemetry.addData("intakeActive", intakeActive);
         }
+        telemetry.addData("intakeActive", intakeActive);
+        telemetry.addData("ArtifactColor", detector.detectArtifactColor());
+        telemetry.update();
     }
 }
+
+//Green is around 160 (145-180
+//Purple is around 230 (225-240
