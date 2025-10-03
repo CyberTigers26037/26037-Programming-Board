@@ -14,10 +14,19 @@ public class ArtifactDetector {
     }
 
     public String detectArtifactColor() {
-        final float[] havValues = new float[3];
+        final float[] hsvValues = new float[3];
         NormalizedRGBA colors = colorSensor.getNormalizedColors();
-        Color.colorToHSV(colors.toColor(), havValues);
-        float hue = havValues[0];
-        return Float.toString(hue);
+        Color.colorToHSV(colors.toColor(), hsvValues);
+        float hue = hsvValues[0];
+
+        if (hue >= 150 && hue <= 180) {
+            return "Green";
+        }
+        else if (hue >= 200 && hue <= 250) {
+            return "Purple";
+        }
+        return null;
     }
 }
+//green 150-180
+//purple 200-250
