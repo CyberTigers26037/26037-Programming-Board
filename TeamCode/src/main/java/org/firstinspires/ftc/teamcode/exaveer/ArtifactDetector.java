@@ -28,5 +28,3 @@ public class ArtifactDetector {
         return null;
     }
 }
-//green 150-180
-//purple 200-250
