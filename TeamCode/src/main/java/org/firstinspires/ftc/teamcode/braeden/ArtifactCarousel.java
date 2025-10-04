@@ -14,13 +14,13 @@ public class ArtifactCarousel {
     public void moveCarouselToIntakePosition(int position) {
         switch (position) {
             case 1:
-                setServoToAngle(-90);
+                setServoToAngle(120);
                 break;
             case 2:
-                setServoToAngle(-60);
+                setServoToAngle(22.5);
                 break;
             case 3:
-                setServoToAngle(-30);
+                setServoToAngle(-80);
                 break;
         }
     }
@@ -28,18 +28,18 @@ public class ArtifactCarousel {
     public void moveCarouselToFirePosition(int position) {
         switch (position) {
             case 1:
-                setServoToAngle(0);
+                setServoToAngle(70);
                 break;
             case 2:
-                setServoToAngle(45);
+                setServoToAngle(-28);
                 break;
             case 3:
-                setServoToAngle(90);
+                setServoToAngle(-130);
                 break;
         }
     }
 
-    private static final double SERVO_DEGREES = 180;
+    private static final double SERVO_DEGREES = 270;
     private void setServoToAngle(double degrees) {
         servo.setPosition(Range.scale(degrees, -SERVO_DEGREES / 2, SERVO_DEGREES / 2, 0, 1));
     }

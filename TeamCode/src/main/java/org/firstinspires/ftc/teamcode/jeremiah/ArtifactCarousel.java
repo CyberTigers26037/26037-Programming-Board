@@ -42,10 +42,8 @@ public class ArtifactCarousel {
             case 3:
                 setServoToAngle(servo, 90);
                 break;
-
-
         }
-
     }
+
 
 }

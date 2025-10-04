@@ -1,26 +1,28 @@
-package org.firstinspires.ftc.teamcode.jeremiah;
+package org.firstinspires.ftc.teamcode.bryceson;
+
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.bryceson.ArtifactCarousel;
+
 @SuppressWarnings("unused")
-@TeleOp(name="jeremiah ArtifactCarouseTestOpMode")
-public class ACE extends OpMode {
+@TeleOp(name = "Bryceson ArtifactCarouselTestOpMode")
+public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
 
+    private ArtifactDetector detector;
+
     boolean intakeActive = false;
+
     @Override
     public void init() {
         carousel = new ArtifactCarousel(hardwareMap);
+        detector = new ArtifactDetector(hardwareMap);
     }
 
     @Override
     public void loop() {
-        if (gamepad1.aWasPressed()) {
-            intakeActive = !intakeActive;
-        }
-
-
         if (intakeActive) {
             if (gamepad1.x) {
                 carousel.moveCarouselToIntakePosition(1);
@@ -33,7 +35,7 @@ public class ACE extends OpMode {
             }
         }
         else {
-            if (gamepad1.x){
+            if (gamepad1.x) {
                 carousel.moveCarouselToFirePosition(1);
             }
             if (gamepad1.y) {
@@ -43,6 +45,11 @@ public class ACE extends OpMode {
                 carousel.moveCarouselToFirePosition(3);
             }
         }
-
+        if (gamepad1.aWasPressed()) {
+            intakeActive = !intakeActive;
+        }
+        telemetry.addData("intake Active", intakeActive);
+        telemetry.addData("Artifact Color", detector.detectArtifactColor());
+        // get the hues of green and purple.
     }
 }
