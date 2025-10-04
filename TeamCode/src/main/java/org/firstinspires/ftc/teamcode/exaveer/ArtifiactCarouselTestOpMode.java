@@ -35,13 +35,13 @@ public class ArtifiactCarouselTestOpMode extends OpMode {
         }
         else {
             if(gamepad1.x) {
-                carousel.moveCarouselToFirePosition(1); //pos1 -90 degrees
+                carousel.moveCarouselToFirePosition(1); //pos1 0 degrees
             }
             if(gamepad1.y) {
-                carousel.moveCarouselToFirePosition(2); //pos2 -60 degrees
+                carousel.moveCarouselToFirePosition(2); //pos2 45 degrees
             }
             if(gamepad1.b) {
-                carousel.moveCarouselToFirePosition(3); //pos3 -30 degrees
+                carousel.moveCarouselToFirePosition(3); //pos3 90 degrees
             }
         }
 

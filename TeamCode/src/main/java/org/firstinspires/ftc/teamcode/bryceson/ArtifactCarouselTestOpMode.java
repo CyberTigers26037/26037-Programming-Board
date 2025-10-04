@@ -1,12 +1,13 @@
 package org.firstinspires.ftc.teamcode.bryceson;
 
+
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.bryceson.ArtifactCarousel;
 
 @SuppressWarnings("unused")
-@TeleOp(name="Bryceson ArtifactCarouselTestOpMode")
+@TeleOp(name = "Bryceson ArtifactCarouselTestOpMode")
 public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
 

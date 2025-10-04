@@ -9,17 +9,18 @@ public class ArtifactCarousel {
 
     public ArtifactCarousel(HardwareMap hwMap) {
         servo = hwMap.get(Servo.class, "carouselServo");
+
     }
 
     public void moveCarouselToIntakePosition(int position) {
         if (position == 1) {
-            setServoToAngle(servo,-90);
+            setServoToAngle(servo, -90);
         }
         if (position == 2) {
-            setServoToAngle(servo,-60);
+            setServoToAngle(servo, -60);
         }
         if (position == 3) {
-            setServoToAngle(servo,-30);
+            setServoToAngle(servo, -30);
         }
     }
 

@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.exaveer;
+package org.firstinspires.ftc.teamcode.braeden;
 
 import android.graphics.Color;
 
@@ -8,9 +8,11 @@ import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 
 public class ArtifactDetector {
     private final NormalizedColorSensor colorSensor;
+    private ArtifactDetector detector;
 
     public ArtifactDetector(HardwareMap hwMap) {
         colorSensor = hwMap.get(NormalizedColorSensor.class, "sensor_color_distance");
+
     }
 
     public String detectArtifactColor() {
@@ -18,13 +20,15 @@ public class ArtifactDetector {
         NormalizedRGBA colors = colorSensor.getNormalizedColors();
         Color.colorToHSV(colors.toColor(), hsvValues);
         float hue = hsvValues[0];
-
-        if (hue >= 150 && hue <= 180) {
-            return "Green";
-        }
-        else if (hue >= 200 && hue <= 250) {
+        if ((hue >= 225) && (hue <= 240)) {
             return "Purple";
         }
-        return null;
+        if ((hue >= 145) && (hue <= 180)) {
+            return "Green";
+        } else {
+            return "None";
+        }
+
     }
 }
+
