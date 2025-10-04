@@ -22,8 +22,24 @@ public class MecanumDrive {
     }
 
     public void drive(double axial, double lateral, double yaw) {
-        // calculate motor power
-        // normalize the values so no wheel power exceeds 100%
-        // send calculated power to wheels
+        double frontLeftPower = axial + lateral + yaw;
+        double backLeftPower = axial - lateral + yaw;
+        double frontRightPower = axial - lateral - yaw;
+        double backRightPower = axial + lateral - yaw;
+
+        double max = Math.max(Math.max(Math.abs(frontLeftPower), Math.abs(backLeftPower)), Math.max(Math.abs(frontRightPower), Math.abs(backRightPower)));
+
+        if (max > 1.0) {
+            frontLeftPower /= max;
+            backLeftPower /= max;
+            frontRightPower /= max;
+            backRightPower /= max;
+        }
+
+        frontLeftDrive.setPower(frontLeftPower);
+        backLeftDrive.setPower(backLeftPower);
+        frontRightDrive.setPower(frontRightPower);
+        backRightDrive.setPower(backRightPower);
+
     }
 }
