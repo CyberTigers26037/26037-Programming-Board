@@ -22,4 +22,13 @@ public class ProgrammingBoard5 {
     public boolean isTouchSensorPressed() {
         return !touchSensor.getState();
     }
+    public void setMotorSpeed(double speed) {
+        motor.setPower(speed);
+    }
+    public double getMotorRotations() {
+        return motor.getCurrentPosition() / ticksPerRotation;
+    }
+    public void setServoPosition(double position) {
+        servo.setPosition(position);
+    }
 }
