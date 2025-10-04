@@ -11,7 +11,7 @@ public class ACE extends OpMode {
     boolean intakeActive = false;
     @Override
     public void init() {
-
+        carousel = new ArtifactCarousel(hardwareMap);
     }
 
     @Override
@@ -19,6 +19,7 @@ public class ACE extends OpMode {
         if (gamepad1.aWasPressed()) {
             intakeActive = !intakeActive;
         }
+
 
         if (intakeActive) {
             if (gamepad1.x) {
@@ -33,8 +34,15 @@ public class ACE extends OpMode {
         }
         else {
             if (gamepad1.x){
-                carousel.moveCarouselToIntakePosition(1);
+                carousel.moveCarouselToFirePosition(1);
+            }
+            if (gamepad1.y) {
+                carousel.moveCarouselToFirePosition(2);
+            }
+            if (gamepad1.b) {
+                carousel.moveCarouselToFirePosition(3);
             }
         }
+
     }
 }
