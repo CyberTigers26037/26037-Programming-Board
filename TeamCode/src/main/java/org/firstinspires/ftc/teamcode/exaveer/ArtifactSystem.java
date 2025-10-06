@@ -23,7 +23,7 @@ public class ArtifactSystem {
 
     public void startIntake(int position) {
         intake.start();
-        carousel.moveCarouselToIntakePosition(1);
+        carousel.moveCarouselToIntakePosition(position);
     }
 
     public void stopIntake(){
@@ -31,7 +31,12 @@ public class ArtifactSystem {
     }
 
     public void toggleIntake(){
-        intake.isRunning();
+        if(intake.isRunning()) {
+            intake.stop();
+        }
+        else{
+            intake.start();
+        }
     }
 
     public void startLauncher(){
@@ -55,8 +60,8 @@ public class ArtifactSystem {
         launcher.adjustFlywheelPower(amount);
     }
 
-    public void getLauncherPower(){
-        launcher.getFlywheelPower();
+    public double getLauncherPower(){
+        return launcher.getFlywheelPower();
     }
 
     public void moveCarouselToPosition(int position) {
@@ -68,6 +73,15 @@ public class ArtifactSystem {
             intake.stop();
         }
 
+    }
+
+    public boolean isIntakeRunning(){
+        return intake.isRunning();
+
+    }
+
+    public boolean isLauncherRunning(){
+        return launcher.isRunning();
     }
 
 }

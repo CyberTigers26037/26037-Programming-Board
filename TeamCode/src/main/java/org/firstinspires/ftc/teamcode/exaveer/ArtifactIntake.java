@@ -12,7 +12,7 @@ public class ArtifactIntake {
     }
 
     public void start() {
-        intakeMotor.setPower(0.5);
+        intakeMotor.setPower(-0.5);
         isRunning = true;
     }
 

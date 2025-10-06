@@ -20,10 +20,10 @@ public class ArtifactIntakeTestOpMode extends OpMode {
         if(gamepad1.aWasPressed()){// stop intake if it is running and start it if it is not
             intakeRunning = !intakeRunning;
             if(intakeRunning) {
-                artifactIntake.start();
+                artifactIntake.stop();
             }
             else{
-                artifactIntake.stop();
+                artifactIntake.start();
             }
         }
         telemetry.addData("Intake", artifactIntake.isRunning());
