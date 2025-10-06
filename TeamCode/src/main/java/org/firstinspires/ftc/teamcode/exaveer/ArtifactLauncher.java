@@ -9,6 +9,8 @@ public class ArtifactLauncher {
     private final DcMotorEx flywheelMotor;
     private final Servo flipperServo;
 
+    private boolean isRunning;
+
     private double flywheelPower = 0.5;
 
     public double getFlywheelPower() {
@@ -33,10 +35,12 @@ public class ArtifactLauncher {
 
     public void startFlywheelMotor() { // set motor power (0.5 speed)
         flywheelMotor.setPower(flywheelPower);
+        isRunning = true;
     }
 
     public void stopFlywheelMotor() { // stop the motor (0.0 speed)
         flywheelMotor.setPower(0.0);
+        isRunning = false;
     }
 
     public void raiseFlipper() { // lower flipper servo to 45 degrees
@@ -45,6 +49,10 @@ public class ArtifactLauncher {
 
     public void parkFlipper() { // lower flipper servo to 0 degrees
         setServoToAngle(flipperServo, 0);
+    }
+
+    public boolean isRunning() {
+        return isRunning;
     }
 
     private static final double SERVO_DEGREES = 270;
