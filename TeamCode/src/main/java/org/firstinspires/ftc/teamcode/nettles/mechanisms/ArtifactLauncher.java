@@ -12,6 +12,6 @@ public class ArtifactLauncher {
     public ArtifactLauncher(HardwareMap hwMap) {
         flywheelMotor = hwMap.get (DcMotorEx.class, "flywheelMotor");
         flipperServo = hwMap.get(Servo.class, "flipperServo");
-        parkFlipper();
+        //parkFlipper();
     }
 }
