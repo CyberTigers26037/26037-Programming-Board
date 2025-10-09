@@ -10,6 +10,17 @@ public class ArtifactCarousel {
     public ArtifactCarousel (HardwareMap hwMap) {
         servo = hwMap.get (Servo.class, "carouselServo");
     }
+    public void moveCarouselToFirePosition (int position){
+        if (position == 1) {
+            setServoToAngle(servo, 0);
+        }
+        if (position == 2){
+            setServoToAngle(servo,45);
+        }
+        if (position ==3){
+            setServoToAngle(servo, 90);
+        }
+    }
     public void moveCarouselToIntakePosition(int position) {
         if (position == 1)
         {
