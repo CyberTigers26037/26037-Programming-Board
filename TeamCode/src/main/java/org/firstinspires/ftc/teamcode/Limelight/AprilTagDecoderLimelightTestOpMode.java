@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode.Limelight;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.exaveer.ArtifactDetector;
+
 @SuppressWarnings("unused")
 @TeleOp(name="Exaveer, Jose & Bryceson AprilTagDecoderLimelightTestOpMode")
 public class AprilTagDecoderLimelightTestOpMode extends OpMode {
