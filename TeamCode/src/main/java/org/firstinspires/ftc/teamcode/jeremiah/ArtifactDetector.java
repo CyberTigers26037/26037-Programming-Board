@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 public class ArtifactDetector {
     private final NormalizedColorSensor colorSensor;
 
+
     public ArtifactDetector(HardwareMap hwMap) {
         colorSensor = hwMap.get(NormalizedColorSensor.class, "sensor_color_distance");
     }
@@ -18,7 +19,16 @@ public class ArtifactDetector {
         NormalizedRGBA colors = colorSensor.getNormalizedColors();
         Color.colorToHSV(colors.toColor(), hsvValues);
         float hue = hsvValues[0];
-        return Float.toString(hue);
+      
+
+        if (hue >= 150 && hue <= 180) {
+            return "Green";
+        }
+        else if (hue >= 200 && hue <= 250) {
+            return "Purple";
+        }
+        return null;
     }
 }
 
+// green is 160 purple is 240
