@@ -1,8 +1,12 @@
 package org.firstinspires.ftc.teamcode.nathan_lee;
 
 
+
+
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.Range;
+
+
 
 
 public class ArtifactSystem {
@@ -13,12 +17,16 @@ public class ArtifactSystem {
     private double flywheelPower = 0.5;
 
 
+
+
     public ArtifactSystem(HardwareMap hwMap) {
         carousel = new ArtifactCarousel(hwMap);
         detector = new ArtifactColorSensor(hwMap);
         launcher = new ArtifactLauncher(hwMap);
         intake = new ArtifactIntake(hwMap);
     }
+
+
 
 
     public void startIntake() {
@@ -28,10 +36,14 @@ public class ArtifactSystem {
     }
 
 
+
+
     public void stopIntake() {
         intake.stop();
         //TODO: write code to stop the intake
     }
+
+
 
 
     public void toggleIntake() {
@@ -43,20 +55,29 @@ public class ArtifactSystem {
         }
         //TODO: write code to stop the intake if it is running and start the intake if
         //it is  not running
-     }
+    }
+
+
+
+
+
+
 
 
     public void startLauncher() {
-            carousel.moveCarouselToFirePosition(1);
-            launcher.startFlywheelMotor();
+        carousel.moveCarouselToFirePosition(1);
+        launcher.startFlywheelMotor();
         // TODO: write code to start the flywheel motor and move the carousel to
         // fire position 1
     }
+
 
     public void raiseFlipper() {
         launcher.raiseFlipper();
         // TODO: write code to raise the flipper
     }
+
+
 
 
     public void parkFlipper() {
@@ -65,24 +86,33 @@ public class ArtifactSystem {
     }
 
 
+
+
     public void stopLauncher() {
         launcher.stopFlywheelMotor();
         // TODO: write code to stop the launcher flywheel motor
     }
 
 
+
+
     public void adjustLauncherPower(double amount) {
         flywheelPower += amount;
         flywheelPower = Range.clip(flywheelPower,0.1,1.0);
 
+
         // TODO: write code to adjust the launcher flywheel power
     }
+
+
 
 
     public double getLauncherPower() {
         return flywheelPower;
         // TODO: write code to return the launcher flywheel power
     }
+
+
 
 
     public void moveCarouselToPosition(int position) {
@@ -97,19 +127,36 @@ public class ArtifactSystem {
     }
 
 
+
+
     public boolean isIntakeRunning() {
         return intake.isRunning();
         // TODO: write code to return whether the intake is running
     }
 
 
+
+
     public boolean isLauncherRunning() {
         return launcher.isRunning();
+
 
         // TODO: write code to return whether the launcher is running
         // NOTE: to complete this method, you will need to add a method on the
         // ArtifactLauncher class called isRunning(), similar to the one in our
         // ArtifactIntake class.
     }
+
+
+    public String detectArtifactColor1() {
+        return detector.detectArtifactColor1();
+    }
+    public String detectArtifactColor2() {
+        return detector.detectArtifactColor2();
+    }
+    public String detectArtifactColor3() {
+        return detector.detectArtifactColor3();
+    }
 }
+
 
