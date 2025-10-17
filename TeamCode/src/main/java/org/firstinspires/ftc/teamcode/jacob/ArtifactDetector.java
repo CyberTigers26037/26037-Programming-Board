@@ -12,7 +12,7 @@ public class ArtifactDetector {
     public ArtifactDetector(HardwareMap hwMap) {
         colorSensor = hwMap.get(NormalizedColorSensor.class, "sensor_color_distance");
     }
-     public String detectArtifactDetector() {
+     public String detectArtifactColor() {
         final float [] hsvValues = new float [3];
         NormalizedRGBA colors = colorSensor.getNormalizedColors();
         Color.colorToHSV(colors.toColor(), hsvValues);
