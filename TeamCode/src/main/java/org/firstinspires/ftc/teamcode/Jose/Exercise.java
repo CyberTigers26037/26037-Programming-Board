@@ -3,9 +3,10 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.bryceson.ArtifactCarousel;
-
+/*
 @SuppressWarnings("unused")
 @TeleOp(name="jose ArtifactCarouselTestOpMode")
+
 public class ArtifactCarouselTestOpMode extends OpMode  {
     private ArtifactCarousel carousel;
     @Override
@@ -27,3 +28,5 @@ public class ArtifactCarouselTestOpMode extends OpMode  {
     }
 
 }
+
+ */
