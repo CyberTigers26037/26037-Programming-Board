@@ -7,10 +7,12 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 @TeleOp(name="jeremiah ArtifactCarouseTestOpMode")
 public class ACE extends OpMode {
     private ArtifactCarousel carousel;
+    private ArtifactDetector detector;
 
     boolean intakeActive = false;
     @Override
     public void init() {
+        detector=new ArtifactDetector(hardwareMap);
         carousel = new ArtifactCarousel(hardwareMap);
     }
 
@@ -43,6 +45,7 @@ public class ACE extends OpMode {
                 carousel.moveCarouselToFirePosition(3);
             }
         }
+        telemetry.addData("Artifact Color", detector.detectArtifactColor());
 
     }
 }

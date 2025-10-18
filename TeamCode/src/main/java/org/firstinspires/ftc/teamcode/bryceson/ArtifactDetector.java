@@ -20,5 +20,7 @@ public class ArtifactDetector {
         Color.colorToHSV(colors.toColor(), hsvValues);
         float hue = hsvValues[0];
         return Float.toString(hue);
+        //green HSV is 120 - 180, 100, 100
+        //purple HSV is 270 - 300, 100,100
     }
 }
