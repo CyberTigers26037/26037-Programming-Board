@@ -29,14 +29,14 @@ public class ArtifactCarousel {
 
     public void moveCarouselToFirePosition(int position) {
         if (position == 1 ){
-            setServoToAngle(servo,-129);
+            setServoToAngle(servo,72);
         }
         if(position == 2){
-            setServoToAngle(servo, -26);
+            setServoToAngle(servo, -129);
 
         }
         if (position ==3){
-            setServoToAngle(servo,72);
+            setServoToAngle(servo,-26);
         }
         currentPosition = position;
     }

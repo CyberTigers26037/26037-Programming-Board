@@ -1,19 +1,21 @@
-package org.firstinspires.ftc.teamcode.jeremiah;
-
+package org.firstinspires.ftc.teamcode.nettles.mechanisms;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@SuppressWarnings("unused")
-@TeleOp(name="jeremiah ArtifactCarouseTestOpMode")
-public class ACE extends OpMode {
-    private ArtifactCarousel carousel;
-    private ArtifactDetector detector;
 
+@SuppressWarnings("unused")
+@TeleOp(name="AA-Nettles ArtifactCarouselTestOpMode")
+public class ArtifactCarouselTestOpMode extends OpMode {
+    private ArtifactDetector detector;
+    private ArtifactCarousel carousel;
     boolean intakeActive = false;
+
     @Override
     public void init() {
-        detector=new ArtifactDetector(hardwareMap);
         carousel = new ArtifactCarousel(hardwareMap);
+        detector = new ArtifactDetector (hardwareMap);
+
+
     }
 
     @Override
@@ -21,8 +23,7 @@ public class ACE extends OpMode {
         if (gamepad1.aWasPressed()) {
             intakeActive = !intakeActive;
         }
-
-
+        telemetry.addData("intakeActive", intakeActive);
         if (intakeActive) {
             if (gamepad1.x) {
                 carousel.moveCarouselToIntakePosition(1);
@@ -33,9 +34,9 @@ public class ACE extends OpMode {
             if (gamepad1.b) {
                 carousel.moveCarouselToIntakePosition(3);
             }
-        }
-        else {
-            if (gamepad1.x){
+
+        } else {
+            if (gamepad1.x) {
                 carousel.moveCarouselToFirePosition(1);
             }
             if (gamepad1.y) {
@@ -44,8 +45,9 @@ public class ACE extends OpMode {
             if (gamepad1.b) {
                 carousel.moveCarouselToFirePosition(3);
             }
+
+
         }
         telemetry.addData("Artifact Color", detector.detectArtifactColor());
-
     }
 }

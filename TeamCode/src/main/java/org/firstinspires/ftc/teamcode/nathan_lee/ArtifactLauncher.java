@@ -1,4 +1,5 @@
-package org.firstinspires.ftc.teamcode.exaveer;
+package org.firstinspires.ftc.teamcode.nathan_lee;
+
 
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -8,56 +9,60 @@ import com.qualcomm.robotcore.util.Range;
 public class ArtifactLauncher {
     private final DcMotorEx flywheelMotor;
     private final Servo flipperServo;
-
-    private boolean isRunning;
-
     private double flywheelPower = 0.5;
-
-    public double getFlywheelPower() {
+    private boolean isRunning;
+    public double getFlywheelPower(){
         return flywheelPower;
     }
 
-    public void adjustFlywheelPower(double amount) {
+
+    public void adjustFlywheelPower(double amount){
         flywheelPower += amount;
-        if(flywheelPower > 1.0){
-            flywheelPower = 1.0;
-        }
-        if (flywheelPower < 0.1){
-            flywheelPower = 0.1;
-        }
+        flywheelPower = Range.clip(flywheelPower,0.1,1.0);
     }
 
+
+
     public ArtifactLauncher(HardwareMap hwMap) {
-        flywheelMotor = hwMap.get(DcMotorEx.class, "flipperwheelMotor");
+        flywheelMotor = hwMap.get(DcMotorEx.class, "flywheelMotor");
         flipperServo = hwMap.get(Servo.class, "flipperServo");
         parkFlipper();
     }
 
-    public void startFlywheelMotor() { // set motor power (0.5 speed)
+
+    public void startFlywheelMotor() {
         flywheelMotor.setPower(flywheelPower);
         isRunning = true;
     }
 
-    public void stopFlywheelMotor() { // stop the motor (0.0 speed)
+
+    public void stopFlywheelMotor() {
         flywheelMotor.setPower(0.0);
         isRunning = false;
+        // TODO: write code to stop the motor (0.0 speed)
     }
 
-    public void raiseFlipper() { // lower flipper servo to 45 degrees
-        setServoToAngle(flipperServo, 90);
+
+    public void raiseFlipper() {
+        setServoToAngle(flipperServo,93);
+        // TODO: Raise the flipper servo to the correct angle (45 degrees)
     }
 
-    public void parkFlipper() { // lower flipper servo to 0 degrees
-        setServoToAngle(flipperServo, 0);
+
+    public void parkFlipper() {
+        setServoToAngle(flipperServo,0);
+        // TODO:Lower the flipper servo to the correct angle (0 degrees)
     }
 
-    public boolean isRunning() {
+    public boolean isRunning(){
         return isRunning;
     }
+
 
     private static final double SERVO_DEGREES = 270;
     private void setServoToAngle(Servo servo, double degrees) {
         servo.setPosition(Range.scale(degrees, -SERVO_DEGREES/2, SERVO_DEGREES/2, 0, 1));
     }
-
 }
+
+

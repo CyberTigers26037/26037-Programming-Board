@@ -37,7 +37,8 @@ public class ArtifactCarousel {
             case 3:
                 setServoToAngle(servo, -130.2);
                 break;
-        }    }
+        }
+    }
 
     private static final double SERVO_DEGREES = 270;
     private void setServoToAngle(Servo servo, double degrees) {
