@@ -1,6 +1,5 @@
 package org.firstinspires.ftc.teamcode.Limelight;
 
-
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
