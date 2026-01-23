@@ -6,11 +6,13 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 @TeleOp(name= "jacob ArtifactCarouseTestOpMode")
 public class ArtifactCarsouelTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
+    private ArtifactDetector detector;
 
     boolean intakeActive = false;
     @Override
     public void init() {
         carousel = new ArtifactCarousel(hardwareMap);
+        detector = new ArtifactDetector(hardwareMap);
     }
     @Override
     public void loop() {
@@ -40,6 +42,7 @@ public class ArtifactCarsouelTestOpMode extends OpMode {
                 carousel.moveCarouselToFirePosition(3);
             }
         }
-
+        telemetry.addData("Artifact Color", detector.detectArtifactColor());
     }
+
 }

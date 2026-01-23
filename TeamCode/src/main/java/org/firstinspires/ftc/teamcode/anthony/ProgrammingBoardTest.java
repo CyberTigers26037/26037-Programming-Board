@@ -2,8 +2,6 @@ package org.firstinspires.ftc.teamcode.anthony;
 
 import android.graphics.Color;
 
-import androidx.core.math.MathUtils;
-
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.AnalogInput;
@@ -57,7 +55,7 @@ public class ProgrammingBoardTest extends OpMode {
         double potVoltage = potentiometer.getVoltage();
         double potMaxVoltage = potentiometer.getMaxVoltage();
         double percentTurned = potVoltage/potMaxVoltage * 100;
-        percentTurned = MathUtils.clamp(percentTurned, 0, 100);
+        percentTurned = Range.clip(percentTurned, 0, 100);
         telemetry.addData("Pot Percentage: ", percentTurned);
 
         // Read color sensor
