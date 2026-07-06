@@ -15,5 +15,9 @@ public class PrimitiveTypes extends OpMode {
         telemetry.addData("Motor Speed", motorSpeed);
         telemetry.addData("Touch Sensor", touchSensorPressed);
     }
-@Override
+
+    @Override
+    public void loop() {
+
+    }
 }
