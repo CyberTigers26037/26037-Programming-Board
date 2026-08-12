@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.util.Range;
 @SuppressWarnings("unused")
 @TeleOp(name ="Nathan lime light test", group = "OpMode")
 public class LimeLightTest extends LinearOpMode {
-    final double TURN_GAIN   =  0.01  ;   //  Turn Control "Gain".  e.g. Ramp up to 25% power at a 25 degree error. (0.25 / 25.0)
+    final double TURN_GAIN   =  0.04  ;   //  Turn Control "Gain".  e.g. Ramp up to 25% power at a 25 degree error. (0.25 / 25.0)
     final double MAX_AUTO_TURN  = 0.3;   //  Clip the turn speed to this max value (adjust for your robot)
 
     @Override

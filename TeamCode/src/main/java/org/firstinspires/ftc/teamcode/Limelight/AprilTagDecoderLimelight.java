@@ -4,15 +4,12 @@ import com.qualcomm.hardware.limelightvision.LLResult;
 import com.qualcomm.hardware.limelightvision.LLResultTypes;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.IMU;
 
 public class AprilTagDecoderLimelight {
     private Limelight3A limelight;
-    private IMU imu;
 
     public void init(HardwareMap hardwareMap) {
         limelight = hardwareMap.get(Limelight3A.class, "limelight");
-        imu = hardwareMap.get(IMU.class, "imu");
         limelight.pipelineSwitch(0);
     }
 
