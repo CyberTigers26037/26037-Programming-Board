@@ -11,7 +11,7 @@ public class HellowWorldComented extends OpMode {
     @Override
     public void init() {
         //this sends to the driver station
-        telemetry.addData("Hello", "World");
+        telemetry.addData("Hello", "Ellis");
     }
 
     /**
