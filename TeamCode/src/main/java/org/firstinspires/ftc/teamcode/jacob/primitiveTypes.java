@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.jacob;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
-@TeleOp()
+@TeleOp(name="Jacob primitiveTypes")
 public class primitiveTypes extends OpMode {
     @Override
     public void init() {
