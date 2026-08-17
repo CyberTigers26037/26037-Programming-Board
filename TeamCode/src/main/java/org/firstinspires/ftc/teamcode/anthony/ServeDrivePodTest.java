@@ -13,7 +13,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class ServeDrivePodTest extends OpMode {
     private enum TUNING_PARAMETER { P, I, D }
     private static final double TUNING_ADJUSTMENT_P = 0.005;
-    private static final double TUNING_ADJUSTMENT_I = 0.0001;
+    private static final double TUNING_ADJUSTMENT_I = 0.00001;
     private static final double TUNING_ADJUSTMENT_D = 0.0001;
 
     private TelemetryManager telemetryM;
@@ -94,7 +94,7 @@ public class ServeDrivePodTest extends OpMode {
         telemetry.addLine();
 
         telemetry.addData("P", axon.getKP());
-        telemetry.addData("I", axon.getKI());
+        telemetry.addData("I", String.format("%.5f", axon.getKI()));
         telemetry.addData("D", axon.getKD());
 
         telemetry.addData("Servo Position", axon.getCurrentAngle());
