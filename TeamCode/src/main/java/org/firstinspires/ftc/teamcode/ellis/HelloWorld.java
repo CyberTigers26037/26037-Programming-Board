@@ -3,8 +3,8 @@ package org.firstinspires.ftc.teamcode.ellis;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="ellis MathOpMode")
-public class MathOpMode extends OpMode {
+@TeleOp(name ="ellis HelloWorld MathOpMode")
+public class HelloWorld extends OpMode {
     @Override
     public void init() {
     }
