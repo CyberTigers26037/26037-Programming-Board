@@ -1,9 +1,9 @@
-package carter;
+package org.firstinspires.ftc.teamcode.carter;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name="Carter HelloWorld")
 public class HelloWorld extends OpMode {
     @Override
     public void init() {
