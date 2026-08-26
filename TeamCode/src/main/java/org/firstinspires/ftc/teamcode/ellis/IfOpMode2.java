@@ -7,4 +7,9 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class IfOpMode2 extends OpMode {
     @Override
     public void init() {}
+
+    @Override
+    public void loop() {
+
+    }
 }
