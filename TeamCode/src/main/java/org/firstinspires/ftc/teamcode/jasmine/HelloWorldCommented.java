@@ -3,11 +3,11 @@ package org.firstinspires.ftc.teamcode.jasmine;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name="hello worlds jasmine")
 public class HelloWorldCommented extends OpMode {
     @Override
     public void init() {
-
+        telemetry.addData("Hello","World");
     }
 
     @Override
