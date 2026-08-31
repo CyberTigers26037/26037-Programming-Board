@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.jeremiah;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name="Jeremiah listing")
 public class listing extends OpMode{
     @Override
     public void init() {

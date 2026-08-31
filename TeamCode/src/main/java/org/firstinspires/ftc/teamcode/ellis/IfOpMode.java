@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ellis;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name= "ellis IfOpMode")
+@TeleOp(name= "Ellis IfOpMode")
 public class IfOpMode extends OpMode {
     @Override
     public void init() {

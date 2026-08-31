@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.braeden;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "BraedenUseRobotLocationOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden is not actively doing software.
+// @TeleOp(name = "BraedenUseRobotLocationOpMode")
 public class UseRobotLocationOpMode extends OpMode {
     RobotLocation robotLocation = new RobotLocation(0);
 

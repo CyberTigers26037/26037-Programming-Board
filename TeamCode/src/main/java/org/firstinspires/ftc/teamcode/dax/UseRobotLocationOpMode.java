@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.dax;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="DaxUseRobotLocationOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Dax is not actively doing software.
+// @TeleOp(name ="DaxUseRobotLocationOpMode")
 public class UseRobotLocationOpMode extends OpMode {
     RobotLocation robotLocation = new RobotLocation(0);
 

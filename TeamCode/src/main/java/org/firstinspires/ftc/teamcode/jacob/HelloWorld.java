@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@Autonomous(name="Jacob HelloWorld")
+// Coach Anthony, 8/2026, Commenting out for now because Jacob is not actively doing software.
+// @Autonomous(name="Jacob HelloWorld")
 public class HelloWorld extends OpMode {
     @Override
     public void init() {

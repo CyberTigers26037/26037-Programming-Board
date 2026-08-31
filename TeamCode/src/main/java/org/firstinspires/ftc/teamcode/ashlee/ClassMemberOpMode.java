@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.ashlee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Ashlee ClassMemberOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Ashlee is not actively doing software.
+// @TeleOp(name = "Ashlee ClassMemberOpMode")
 public class ClassMemberOpMode extends OpMode {
     boolean initDone;
 

@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ellis;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="ellis Hello world comented")
+@TeleOp(name ="Ellis HelloWorldCommented")
 public class HellowWorldComented extends OpMode {
     /**
      * This is callled when the driver presses INIT

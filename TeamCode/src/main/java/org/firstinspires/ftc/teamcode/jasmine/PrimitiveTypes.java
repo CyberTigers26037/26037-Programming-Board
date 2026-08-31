@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.jasmine;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name="Jasmine PrimitiveTypes")
 public class PrimitiveTypes extends OpMode {
 
     @Override

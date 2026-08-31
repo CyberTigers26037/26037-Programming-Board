@@ -5,7 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.bryceson.Mechanisms.ProgrammingBoard3;
 
-@TeleOp(name = "Bryceson MotorOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Bryceson is not actively doing software.
+// @TeleOp(name = "Bryceson MotorOpMode")
 public class MotorOpMode extends OpMode {
     ProgrammingBoard3 board = new ProgrammingBoard3();
     @Override

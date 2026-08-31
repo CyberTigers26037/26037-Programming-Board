@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.nettles;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 //names TelopOp
-@TeleOp(name = "Nettles ClassMemberOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp(name = "Nettles ClassMemberOpMode")
 public class ClassMemberOpMode extends OpMode{
     //names boolean(True/False) variable initDone
     boolean initDone;

@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings("unused")
-@TeleOp(name="jeremiah ArtifactCarouseTestOpMode")
+@TeleOp(name="Jeremiah ArtifactCarouselTestOpMode")
 public class ACE extends OpMode {
     private ArtifactCarousel carousel;
     private ArtifactDetector detector;

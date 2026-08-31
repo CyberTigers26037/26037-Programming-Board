@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.polizzotti;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name="Polizzotti IfOpMode")
 public class IfOpMode extends OpMode {
     @Override
     public void init() {

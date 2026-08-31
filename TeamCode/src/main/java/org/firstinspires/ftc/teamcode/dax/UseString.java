@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.dax;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="Dax UseString")
+// Coach Anthony, 8/2026, Commenting out for now because Dax is not actively doing software.
+// @TeleOp(name ="Dax UseString")
 public class UseString extends OpMode {
     @Override
     public void init() {

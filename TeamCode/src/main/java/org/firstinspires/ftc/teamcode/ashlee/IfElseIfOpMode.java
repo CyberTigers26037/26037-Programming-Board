@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.ashlee;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Ashlee IfElseIfOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Ashlee is not actively doing software.
+// @TeleOp(name = "Ashlee IfElseIfOpMode")
 public class IfElseIfOpMode extends OpMode {
     @Override
     public void init() {

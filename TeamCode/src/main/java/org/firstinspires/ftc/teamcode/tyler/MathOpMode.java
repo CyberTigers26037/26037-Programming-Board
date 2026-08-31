@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.tyler;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-@TeleOp (name = "tylermath")
+@TeleOp (name = "Tyler MathOpMode")
 public class MathOpMode extends OpMode {
     @Override
     public void init(){

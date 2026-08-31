@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.braeden;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "Braeden IfOpMode2")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden is not actively doing software.
+// @TeleOp(name = "Braeden IfOpMode2")
 public class IfOpMode2 extends OpMode {
     @Override
     public void init() {

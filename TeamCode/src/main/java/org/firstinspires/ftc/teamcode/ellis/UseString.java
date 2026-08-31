@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ellis;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="ellis Usingstrings")
+@TeleOp(name ="Ellis UseString")
 public class UseString extends OpMode {
     @Override
     public void init() {

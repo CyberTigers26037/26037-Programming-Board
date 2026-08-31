@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.exaveer;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name="exaveer GamepadRumbleBlipsOpMode")
+@TeleOp(name="Exaveer GamepadRumbleBlipsOpMode")
 public class GamepadRumbleBlipsOpMode extends OpMode {
     boolean wasA;
 

@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.tyler;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp
+@TeleOp (name = "Tyler PrimitiveTypes")
 public class PrimitiveTypes extends OpMode {
     @Override
     public void init() {

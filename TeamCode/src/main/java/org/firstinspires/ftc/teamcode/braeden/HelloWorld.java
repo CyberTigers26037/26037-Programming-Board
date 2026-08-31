@@ -6,7 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
 
-@Autonomous(name = "Braeden HelloWorld")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden is not actively doing software.
+// @Autonomous(name = "Braeden HelloWorld")
 
 public class HelloWorld extends OpMode {
     /**
