@@ -3,12 +3,13 @@ package org.firstinspires.ftc.teamcode.Joshua;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name="Joshua HelloWorld")
-public class HelloWorld extends OpMode {
-
+@TeleOp(name="Joshua UseString")
+public class UseString extends OpMode {
     @Override
     public void init() {
-        telemetry.addData("hello","world");
+        String myName = "Joshua Galvez";
+
+        telemetry.addData("Hello", myName);
     }
 
     @Override
@@ -16,5 +17,3 @@ public class HelloWorld extends OpMode {
 
     }
 }
-
-// hello */
