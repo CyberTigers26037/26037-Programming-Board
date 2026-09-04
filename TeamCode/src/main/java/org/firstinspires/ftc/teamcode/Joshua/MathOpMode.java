@@ -1,19 +1,18 @@
-package org.firstinspires.ftc.teamcode.Lakai;
+package org.firstinspires.ftc.teamcode.Joshua;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name="Lakai MathOpMode")
-public class LakaiMathOpMode extends OpMode {
+@TeleOp(name="Joshua MathOpMode")
+public class MathOpMode extends OpMode {
     @Override
     public void init() {
-
     }
 
     @Override
     public void loop() {
         double speedForward = -gamepad1.left_stick_y / 2.0;
-        telemetry.addData("Left Trigger", gamepad1.left_trigger);
-
+        telemetry.addData("left stick y", gamepad1.left_stick_y);
+        telemetry.addData("speed Forward", speedForward);
     }
 }
