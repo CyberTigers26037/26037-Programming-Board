@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 @TeleOp(name="Anthony Swerve Drive Pod Test")
 public class ServeDrivePodTest extends OpMode {
     private enum TUNING_PARAMETER { P, I, D }
-    private static final double TUNING_ADJUSTMENT_P = 0.005;
+    private static final double TUNING_ADJUSTMENT_P = 0.001;
     private static final double TUNING_ADJUSTMENT_I = 0.00001;
     private static final double TUNING_ADJUSTMENT_D = 0.0001;
 
@@ -30,6 +30,7 @@ public class ServeDrivePodTest extends OpMode {
         driveMotor = hardwareMap.get(DcMotor.class, "swerveMotor");
 
         axon = new RTPAxon(servo, encoder, 0);
+        axon.setMaxPower(1.0);
         axon.setPidCoeffs(0.01, 0.0005, 0.0);
         telemetryM = PanelsTelemetry.INSTANCE.getTelemetry();
     }
