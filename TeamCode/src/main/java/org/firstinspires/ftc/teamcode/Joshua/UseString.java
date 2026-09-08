@@ -7,11 +7,13 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class  UseString extends OpMode {
     @Override
     public void init() {
+        int grade = 9;
         String myName = "Joshua Galvez";
 
         telemetry.addData("Hello", myName);
-    }
+        telemetry.addData("Grade", grade);
 
+    }
     @Override
     public void loop() {
 
