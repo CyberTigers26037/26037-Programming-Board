@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.jacob;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name= "jacob ArtifactCarouseTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Jacob is not actively doing software.
+// @TeleOp(name= "jacob ArtifactCarouseTestOpMode")
 public class ArtifactCarsouelTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
     private ArtifactDetector detector;

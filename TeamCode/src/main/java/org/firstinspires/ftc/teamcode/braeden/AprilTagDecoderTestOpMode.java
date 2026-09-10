@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings("unused")
-@TeleOp(name ="BradenAndDax AprilTagDecoderTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden is not actively doing software.
+// @TeleOp(name ="BradenAndDax AprilTagDecoderTestOpMode")
 public class AprilTagDecoderTestOpMode extends OpMode {
     private String obeliskArtifactOrder;
     private AprilTagDecoder aprilTagDecoder;

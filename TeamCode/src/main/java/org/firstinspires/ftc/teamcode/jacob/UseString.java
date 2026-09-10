@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings("unused")
-@TeleOp(name="Jacob UserString")
+// Coach Anthony, 8/2026, Commenting out for now because Jacob is not actively doing software.
+// @TeleOp(name="Jacob UserString")
 public class UseString extends OpMode {
     @Override
     public void init() {

@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.nettles.mechanisms.ProgrammingBoard1;
 @SuppressWarnings("unused")
-@TeleOp( name = "Nettles TouchSensorOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp( name = "Nettles TouchSensorOpMode")
 public class TouchSensorOpMode extends OpMode {
     ProgrammingBoard1 board = new ProgrammingBoard1();
 

@@ -7,7 +7,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.bryceson.ArtifactCarousel;
 
 @SuppressWarnings("unused")
-@TeleOp(name = "Bryceson ArtifactCarouselTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Bryceson is not actively doing software.
+// @TeleOp(name = "Bryceson ArtifactCarouselTestOpMode")
 public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
 

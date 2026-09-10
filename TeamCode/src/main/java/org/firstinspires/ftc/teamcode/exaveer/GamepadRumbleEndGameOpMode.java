@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.exaveer;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "exaveer GamepadRumbleEndGameOpMode")
+@TeleOp(name = "Exaveer GamepadRumbleEndGameOpMode")
 public class GamepadRumbleEndGameOpMode extends OpMode {
     boolean inEndGame;
     double endGameTime;

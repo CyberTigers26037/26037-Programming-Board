@@ -5,7 +5,8 @@ import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.tel
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-@TeleOp(name = "Nettles IfElseIfOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp(name = "Nettles IfElseIfOpMode")
 
 public class IfElseIfOpMode extends OpMode {
     @Override

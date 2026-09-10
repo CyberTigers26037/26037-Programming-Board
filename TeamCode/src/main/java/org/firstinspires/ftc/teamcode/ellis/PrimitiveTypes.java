@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.ellis;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="ellis primitivetypes")
+@TeleOp(name ="Ellis PrimitiveTypes")
 public class PrimitiveTypes extends OpMode {
     @Override
     public void init() {

@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @SuppressWarnings ("unused")
-@TeleOp (name="Braeden and Dax ArtifactCarouselTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden is not actively doing software.
+// @TeleOp (name="Braeden and Dax ArtifactCarouselTestOpMode")
 public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactCarousel carousel;
     private ArtifactDetector detector;

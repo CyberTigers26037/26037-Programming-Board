@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.bryceson;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name ="Bryceson_IfOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Bryceson is not actively doing software.
+// @TeleOp(name ="Bryceson IfOpMode")
 public class IfOpMode extends OpMode {
     @Override
     public void init() {

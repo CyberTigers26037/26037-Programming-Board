@@ -2,7 +2,8 @@ package org.firstinspires.ftc.teamcode.nettles;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-@TeleOp(name = "Nettles ClassMethodOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp(name = "Nettles ClassMethodOpMode")
 
 public class ClassMethodOpMode extends OpMode{
     @Override

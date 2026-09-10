@@ -3,8 +3,6 @@ package org.firstinspires.ftc.teamcode.exaveer;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.david_tang_and_nathan_lee.RobotLocation;
-
 
 @TeleOp(name = "Exaveer UseRobotLocation")
 public class UseRobotLocation extends OpMode {

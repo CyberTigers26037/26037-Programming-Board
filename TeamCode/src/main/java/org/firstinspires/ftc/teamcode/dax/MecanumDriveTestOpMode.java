@@ -6,7 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@TeleOp(name = "Braeden and Dax MecanumDriveTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Dax is not actively doing software.
+// @TeleOp(name = "Braeden and Dax MecanumDriveTestOpMode")
 public class MecanumDriveTestOpMode extends LinearOpMode {
 
     // Declare OpMode members for each of the 4 motors.

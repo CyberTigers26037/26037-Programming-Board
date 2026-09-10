@@ -3,7 +3,8 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@Autonomous(name = "Nettles HelloWorld")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @Autonomous(name = "Nettles HelloWorld")
 
 public class NettlesHelloWorld extends OpMode{
     @Override

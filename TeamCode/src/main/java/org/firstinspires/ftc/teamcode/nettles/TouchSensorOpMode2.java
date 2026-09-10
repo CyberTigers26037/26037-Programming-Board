@@ -6,7 +6,8 @@ import org.firstinspires.ftc.teamcode.nettles.mechanisms.ProgrammingBoard2;
 //suppresses the warning of a line being unused which often happens
 @SuppressWarnings("unused")
 //Declares this class to be TeleOp on the Control Hub and Names it.
-@TeleOp( name = "Nettles TouchSensorOpMode2")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp( name = "Nettles TouchSensorOpMode2")
 //Declares the security of the class and extends the OpMode from FTC
 // which requires the 2 methods.
 public class TouchSensorOpMode2 extends OpMode {

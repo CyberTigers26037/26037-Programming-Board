@@ -62,7 +62,8 @@ import java.util.List;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.
  */
 @SuppressWarnings("unused")
-@TeleOp(name = "Jacob DetectObeliskAprilTag")
+// Coach Anthony, 8/2026, Commenting out for now because Jacob is not actively doing software.
+// @TeleOp(name = "Jacob DetectObeliskAprilTag")
 
 public class DetectObeliskAprilTag extends LinearOpMode {
 

@@ -62,7 +62,8 @@ import java.util.List;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.
  */
 @SuppressWarnings("unused")
-@TeleOp(name = "Braeden and Dax DetectObeliskAprilTag")
+// Coach Anthony, 8/2026, Commenting out for now because Braeden and Dax is not actively doing software.
+// @TeleOp(name = "Braeden and Dax DetectObeliskAprilTag")
 public class DetectObeliskAprilTag extends LinearOpMode {
 
     private static final boolean USE_WEBCAM = true;  // true for webcam, false for phone camera

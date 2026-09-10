@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
-@TeleOp(name= "exaveer GamepadRumbleOpMode")
+@TeleOp(name= "Exaveer GamepadRumbleOpMode")
 public class GamepadRumbleOpMode extends OpMode {
     @Override
     public void init() {

@@ -5,7 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.dax.mechanisms.ProgrammingBoard2;
 
-@TeleOp(name ="DaxTouchSensorOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Dax is not actively doing software.
+// @TeleOp(name ="DaxTouchSensorOpMode")
 public class TouchSensorOpMode extends OpMode {
     ProgrammingBoard2 board = new ProgrammingBoard2();
     @Override

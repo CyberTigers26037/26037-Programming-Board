@@ -5,7 +5,8 @@ import androidx.annotation.NonNull;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name= "Bryceson_PrimitiveTypes")
+// Coach Anthony, 8/2026, Commenting out for now because Bryceson is not actively doing software.
+// @TeleOp(name= "Bryceson_PrimitiveTypes")
 public class PrimitiveTypes extends OpMode {
     @Override
     public void init() {

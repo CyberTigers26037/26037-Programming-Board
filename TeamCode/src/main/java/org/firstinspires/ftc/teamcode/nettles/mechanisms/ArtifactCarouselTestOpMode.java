@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
 @SuppressWarnings("unused")
-@TeleOp(name="AA-Nettles ArtifactCarouselTestOpMode")
+// Coach Anthony, 8/2026, Commenting out for now because Mr. Nettles is not actively doing software.
+// @TeleOp(name="AA-Nettles ArtifactCarouselTestOpMode")
 public class ArtifactCarouselTestOpMode extends OpMode {
     private ArtifactDetector detector;
     private ArtifactCarousel carousel;
