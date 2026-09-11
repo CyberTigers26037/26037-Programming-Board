@@ -31,7 +31,7 @@ public class ServeDrivePodTest extends OpMode {
 
         axon = new RTPAxon(servo, encoder, 0);
         axon.setMaxPower(1.0);
-        axon.setPidCoeffs(0.01, 0.0005, 0.0);
+        axon.setPidCoeffs(0.007, 0.00041, 0.0002);
         telemetryM = PanelsTelemetry.INSTANCE.getTelemetry();
     }
 
