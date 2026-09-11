@@ -10,7 +10,7 @@ public class PreogrammingBoard1 {
         touchSensor = hwMap.get(DigitalChannel.class, "touch_sensor");
         touchSensor.setMode(DigitalChannel.Mode.INPUT);
 
-        public boolean getTouchSensorState(){
+        //public boolean getTouchSensorState(){
             return touchSensor.getState();
         }
 
