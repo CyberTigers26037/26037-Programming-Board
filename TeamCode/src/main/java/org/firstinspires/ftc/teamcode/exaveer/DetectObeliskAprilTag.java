@@ -37,6 +37,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
+import org.firstinspires.ftc.vision.apriltag.AprilTagSingleDetection;
 
 import java.util.List;
 
@@ -143,19 +144,22 @@ public class DetectObeliskAprilTag extends LinearOpMode {
 
         // Detects what colors need to be found on obelisk
         for (AprilTagDetection detection : currentDetections) {
-            if(detection.id == 21) {
-                telemetry.addLine("Green Purple Purple");
-                return true;
+            if (detection instanceof AprilTagSingleDetection) {
+                AprilTagSingleDetection singleDet = (AprilTagSingleDetection) detection;
+                if (singleDet.id == 21) {
+                    telemetry.addLine("Green Purple Purple");
+                    return true;
+                }
+                if (singleDet.id == 22) {
+                    telemetry.addLine("Purple Green Purple");
+                    return true;
+                }
+                if (singleDet.id == 23) {
+                    telemetry.addLine("Purple Purple Green");
+                    return true;
+                }
+                visionPortal.close();
             }
-            if (detection.id == 22) {
-                telemetry.addLine("Purple Green Purple");
-                return true;
-            }
-            if (detection.id == 23) {
-                telemetry.addLine("Purple Purple Green");
-                return true;
-            }
-            visionPortal.close();
         }   // end for() loop
         return false;
 
