@@ -5,7 +5,7 @@ package org.firstinspires.ftc.teamcode.Lakai;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name="Lakai Robotlocation")
+
 public class LakaiRobotLocation{
     double angle;
 
