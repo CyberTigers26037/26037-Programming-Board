@@ -14,6 +14,8 @@ public class ProgrammingBoard4 {
         touchSensor.setMode(DigitalChannel.Mode.INPUT);
         motor = hwMap.get(DcMotor.class, "motor");
         motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        ticksPerRotation = motor.getMotorType().getTicksPerRev();
+        motor.getPower();
     }
     public boolean isTouchSensorPressed() {
         return !touchSensor.getState();
