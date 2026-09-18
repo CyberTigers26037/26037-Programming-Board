@@ -6,6 +6,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
+import org.firstinspires.ftc.vision.apriltag.AprilTagSingleDetection;
 
 import java.util.List;
 
@@ -27,16 +28,19 @@ public class AprilTagDecoder{
 
         // Detects what colors need to be found on obelisk
         for (AprilTagDetection detection : currentDetections) {
-            if (detection.id == 21) {
-                return "Green Purple Purple";
+            if (detection instanceof AprilTagSingleDetection) {
+                AprilTagSingleDetection singleDet = (AprilTagSingleDetection) detection;
+                if (singleDet.id == 21) {
+                    return "Green Purple Purple";
+                }
+                if (singleDet.id == 22) {
+                    return "Purple Green Purple";
+                }
+                if (singleDet.id == 23) {
+                    return "Purple Purple Green";
+                }
+                visionPortal.close();
             }
-            if (detection.id == 22) {
-                return "Purple Green Purple";
-            }
-            if (detection.id == 23) {
-                return "Purple Purple Green";
-            }
-            visionPortal.close();
         }
         return null;
     }
