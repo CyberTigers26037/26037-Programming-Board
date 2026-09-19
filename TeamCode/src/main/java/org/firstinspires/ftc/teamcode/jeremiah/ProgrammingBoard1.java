@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.jeremiah;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class PreogrammingBoard1 {
+public class ProgrammingBoard1 {
     private DigitalChannel touchSensor;
 
     public void init(HardwareMap hwMap) {
