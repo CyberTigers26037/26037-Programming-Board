@@ -7,6 +7,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
+import org.firstinspires.ftc.vision.apriltag.AprilTagSingleDetection;
 
 import java.util.List;
 
@@ -26,15 +27,18 @@ public class AprilTagDecoder {
 
         // Step through the list of detections and display info for each one.
         for (AprilTagDetection detection : currentDetections) {
-            if (detection.id == 21) {
-                return "Green, Purple, Purple";
+            if (detection instanceof AprilTagSingleDetection) {
+                AprilTagSingleDetection singleDet = (AprilTagSingleDetection) detection;
+                if (singleDet.id == 21) {
+                    return "Green, Purple, Purple";
 
-            } else if (detection.id == 22) {
-                return "Purple, Green, Purple";
+                } else if (singleDet.id == 22) {
+                    return "Purple, Green, Purple";
 
-            } else if (detection.id == 23) {
-                return "Purple, Purple, Green";
+                } else if (singleDet.id == 23) {
+                    return "Purple, Purple, Green";
 
+                }
             }
 
         }

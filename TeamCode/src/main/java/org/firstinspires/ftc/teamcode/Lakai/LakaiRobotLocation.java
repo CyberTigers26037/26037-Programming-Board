@@ -1,26 +1,29 @@
-package org.firstinspires.ftc.teamcode.Lilliana;
+package org.firstinspires.ftc.teamcode.Lakai;
 
-import androidx.annotation.NonNull;
 
-public class RobotLocation {
+
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
+
+public class LakaiRobotLocation{
     double angle;
 
-    public RobotLocation(double angle){
+    public LakaiRobotLocation(double angle){
         this.angle = angle;
     }
 
     public double getHeading(){
         double angle = this.angle;
         while(angle > 180){
-            angle -= 360;
+            angle-=360;
         }
         while(angle < -180){
-            angle +=360;
+            angle+=360;
         }
         return angle;
     }
 
-    @NonNull
     @Override
     public String toString(){
         return "RobotLocation: angle (" + angle +")";
