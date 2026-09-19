@@ -7,7 +7,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import org.firstinspires.ftc.teamcode.bryceson.Mechanisms.Programmingboard7;
 
 // Coach Anthony, 8/2026, Commenting out for now because Bryceson is not actively doing software.
-// @TeleOp(name="Bryceson DistanceColorOpMode")
+@TeleOp(name="Bryceson DistanceColorOpMode")
 public class DistanceColorOpMode extends OpMode {
     Programmingboard7 board = new Programmingboard7();
     @Override
