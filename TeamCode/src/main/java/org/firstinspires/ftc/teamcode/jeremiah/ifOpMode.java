@@ -4,7 +4,7 @@ package org.firstinspires.ftc.teamcode.jeremiah;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp()
+@TeleOp(name = "Jeremiah if OpMode")
 public class ifOpMode extends OpMode {
     @Override
     public void init() {
