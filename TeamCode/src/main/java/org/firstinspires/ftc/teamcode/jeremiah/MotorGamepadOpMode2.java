@@ -20,4 +20,11 @@ public class MotorGamepadOpMode2 extends OpMode {
         telemetry.addData("Motor speed", motorspeed);
         telemetry.addData("Motor rotations", board.getMotorRotations());
     }
+    double squareInputWithSign(double input){
+        double output = input * input;
+        if(input < 0){
+            output = output * -1;
+        }
+        return output;
+    }
 }
