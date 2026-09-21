@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.jasmine;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
@@ -14,6 +15,8 @@ public class ProgrammingBoard4 {
         touchSensor.setMode(DigitalChannel.Mode.INPUT);
         motor = hwMap.get(DcMotor.class, "motor");
         motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        motor.setDirection(DcMotorSimple.Direction.REVERSE);
         ticksPerRotation = motor.getMotorType().getTicksPerRev();
         motor.getPower();
     }
