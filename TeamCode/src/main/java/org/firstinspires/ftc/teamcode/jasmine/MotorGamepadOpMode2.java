@@ -3,8 +3,8 @@ package org.firstinspires.ftc.teamcode.jasmine;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name="Jasmine MotorGamepadOpMode")
-public class MotorGamepadOpMode extends OpMode {
+@TeleOp(name="Jasmine MotorGamepadOpMode2")
+public class MotorGamepadOpMode2 extends OpMode {
     ProgrammingBoard4 board = new ProgrammingBoard4();
     @Override
     public void init() {
@@ -13,12 +13,12 @@ public class MotorGamepadOpMode extends OpMode {
 
     @Override
     public void loop() {
-        if(gamepad1.a) {
-            board.setMotorSpeed(0.5);
-        }
-        else{
-            board.setMotorSpeed(0.0);
-        }
+        double motorSpeed = gamepad1.left_stick_y;
+
+        board.setMotorSpeed(motorSpeed);
+
+        telemetry.addData("Motor speed", motorSpeed);
         telemetry.addData("Motor rotations", board.getMotorRotations());
+
     }
 }
