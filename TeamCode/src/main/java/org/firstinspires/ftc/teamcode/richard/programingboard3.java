@@ -10,12 +10,10 @@ public class programingboard3 {
     private DigitalChannel touchSensor;
     private DcMotor moter;
 
-    private Void init(HardwareMap hwmap){
-touchSensor = hwmap.get(DigitalChannel . class,  "touch_sensor");
-touchSensor . setMode(DigitalChannel.Mode.INPUT);
-moter = hwmap.se
-
-
+    private void init(HardwareMap hwmap){
+        touchSensor = hwmap.get(DigitalChannel . class,  "touch_sensor");
+        touchSensor . setMode(DigitalChannel.Mode.INPUT);
+        //moter = hwmap.se
     }
 
 
