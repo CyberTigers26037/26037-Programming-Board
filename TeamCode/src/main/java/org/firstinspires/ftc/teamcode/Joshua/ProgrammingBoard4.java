@@ -12,7 +12,7 @@ public class ProgrammingBoard4 {
     public void init(HardwareMap hwMap) {
         touchSensor = hwMap.get(DigitalChannel.class, "touch_sensor");
         touchSensor.setMode(DigitalChannel.Mode.INPUT);
-        DcMotor motor = hwMap.get(DcMotor.class, "motor");
+        motor = hwMap.get(DcMotor.class, "motor");
         motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         ticksPerRotation = motor.getMotorType().getTicksPerRev();
     }
@@ -23,6 +23,7 @@ public class ProgrammingBoard4 {
     public void setMotorSpeed(double speed) {
         motor.setPower(speed);
     }
+
     public double getMotorRotations(){
         return motor.getCurrentPosition() / ticksPerRotation;
     }
