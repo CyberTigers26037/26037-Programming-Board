@@ -18,8 +18,15 @@ public class Programmingboard4 {
         motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         ticksPerRotation = motor.getMotorType().getTicksPerRev();
     }
-
     public boolean isTouchSensorPressed() {
         return !touchSensor.getState();
+    }
+
+    public void setMotorSpeed(double speed) {
+        motor.setPower(speed);
+    }
+    public double getMotorSpeed(double speed) {
+        return motor.getCurrentPosition() / ticksPerRotation;
+
     }
 }
