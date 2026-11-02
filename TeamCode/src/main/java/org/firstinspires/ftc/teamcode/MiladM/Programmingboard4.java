@@ -25,7 +25,7 @@ public class Programmingboard4 {
     public void setMotorSpeed(double speed) {
         motor.setPower(speed);
     }
-    public double getMotorSpeed(double speed) {
+    public double getMotorRotations() {
         return motor.getCurrentPosition() / ticksPerRotation;
 
     }
