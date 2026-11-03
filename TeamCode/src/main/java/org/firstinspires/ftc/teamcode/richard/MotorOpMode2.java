@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.jeremiah.ProgrammingBoard4;
 
-@TeleOp(name="Richard motorOpmode")
+@TeleOp(name="Richard motorOpmode2")
 public class MotorOpMode2 extends OpMode {
     ProgrammingBoard4 board = new ProgrammingBoard4();
     @Override
@@ -15,7 +15,7 @@ public class MotorOpMode2 extends OpMode {
 
     @Override
     public void loop() {
-       board.setMotorSpeed(0.5);
+       board.setMotorSpeed(0.1);
        telemetry.addData("motor rotations", board.getMotorRotations());
     }
 }
