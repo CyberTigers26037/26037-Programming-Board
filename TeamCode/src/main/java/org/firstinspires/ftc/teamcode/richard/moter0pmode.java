@@ -8,16 +8,17 @@ import org.firstinspires.ftc.teamcode.Lakai.ProgrammingBoard4;
 @TeleOp(name="Richard  moterop")
 public class moter0pmode extends OpMode {
     ProgrammingBoard4 board = new ProgrammingBoard4();
-
-
     @Override
-    public void init() {
 
+
+    public void init() {
+        board.init(hardwareMap);
     }
 
     @Override
     public void loop() {
-
+        board.setMotorSpeed(0.5);
+        telemetry.addData("Motor rotations",board.getMotorRotations());
     }
 }
 
