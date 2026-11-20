@@ -19,6 +19,6 @@ public class MotorSensorOpmode extends OpMode {
         } else {
             board.setMotorspeed(0.0);
         }
-        //telemetry.addData("motor rotations", board.getMotorRotations());
+        //t qwes4r5tr6t7y8u9i0o-\]67telemetry.addData("motor rotations", board.getMotorRotations());
     }
 }
