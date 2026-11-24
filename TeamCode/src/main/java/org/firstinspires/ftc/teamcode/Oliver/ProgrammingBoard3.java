@@ -5,7 +5,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-@TeleOp( name = "")
 public class ProgrammingBoard3 {
     private DigitalChannel touchSensor;
     private DcMotor motor;
